@@ -15,6 +15,8 @@ public:
 	MainWindow(QWidget *parent = nullptr);
 	~MainWindow();
 
+	int add_page_to_tabpanel(QString dir, const QString &label);
+
 private slots:
     void on_actionExit_triggered();
 
