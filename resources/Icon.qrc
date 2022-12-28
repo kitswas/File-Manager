@@ -1,6 +1,7 @@
 <RCC>
     <qresource prefix="/icons">
         <file>icon-folder.red.full.png</file>
-        <file>icon-folder.red.fullx128.png</file>
+        <file>icon-folder.redx128.png</file>
+        <file>icon-folder.redx512.png</file>
     </qresource>
 </RCC>
