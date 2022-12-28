@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7emainwindow_0',['~MainWindow',['../classMainWindow.html#ae98d00a93bc118200eeef9f9bba1dba7',1,'MainWindow']]]
+  ['get_5fcurrent_5fdir_0',['get_current_dir',['../classNavpage.html#a7664a0eaacaf98b2afd622e0e5dbcfb2',1,'Navpage']]]
 ];
