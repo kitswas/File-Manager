@@ -3,6 +3,7 @@
 #include "navpage.h"
 #include <QTabWidget>
 #include <QLineEdit>
+#include <QDir>
 
 MainWindow::MainWindow(QWidget *parent)
 	: QMainWindow(parent), ui(new Ui::MainWindow)
@@ -30,4 +31,9 @@ int MainWindow::add_page_to_tabpanel(QString dir, const QString &label)
 	Navpage *currentpage = (Navpage *)(tabWidget->currentWidget());
 	addressBar->setText(currentpage->get_current_dir());
 	return 0;
+}
+
+void MainWindow::on_actionNew_tab_triggered()
+{
+	add_page_to_tabpanel(QDir::homePath(), "Home");
 }
