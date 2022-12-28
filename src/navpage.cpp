@@ -3,7 +3,6 @@
 Navpage::Navpage(QWidget *parent)
 	: QWidget{parent}
 {
-
 }
 
 int Navpage::change_dir(QString new_dir)

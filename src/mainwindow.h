@@ -4,7 +4,10 @@
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
-namespace Ui { class MainWindow; }
+namespace Ui
+{
+	class MainWindow;
+}
 QT_END_NAMESPACE
 
 class MainWindow : public QMainWindow
@@ -18,7 +21,7 @@ public:
 	int add_page_to_tabpanel(QString dir, const QString &label);
 
 private slots:
-    void on_actionExit_triggered();
+	void on_actionExit_triggered();
 
 private:
 	Ui::MainWindow *ui;

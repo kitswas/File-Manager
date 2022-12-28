@@ -6,8 +6,8 @@
 int main(int argc, char *argv[])
 {
 	QApplication a(argc, argv);
-    MainWindow w;
+	MainWindow w;
 	w.add_page_to_tabpanel(QDir::homePath(), "Home");
-    w.show();
+	w.show();
 	return a.exec();
 }

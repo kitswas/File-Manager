@@ -5,8 +5,7 @@
 #include <QLineEdit>
 
 MainWindow::MainWindow(QWidget *parent)
-	: QMainWindow(parent)
-	, ui(new Ui::MainWindow)
+	: QMainWindow(parent), ui(new Ui::MainWindow)
 {
 	ui->setupUi(this);
 }
@@ -18,17 +17,17 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_actionExit_triggered()
 {
-    exit(EXIT_SUCCESS);
+	exit(EXIT_SUCCESS);
 }
 
-int MainWindow::add_page_to_tabpanel(QString dir, const QString& label)
+int MainWindow::add_page_to_tabpanel(QString dir, const QString &label)
 {
-    Navpage *newpage = new Navpage();
-    newpage->change_dir(dir);
-    QTabWidget *tabWidget = findChild<QTabWidget*>("tabWidget");
+	Navpage *newpage = new Navpage();
+	newpage->change_dir(dir);
+	QTabWidget *tabWidget = findChild<QTabWidget *>("tabWidget");
 	tabWidget->addTab(newpage, label);
-    QLineEdit *addressBar = findChild<QLineEdit*>("addressBar");
-    Navpage *currentpage = (Navpage*)(tabWidget->currentWidget());
-    addressBar->setText(currentpage->get_current_dir());
-    return 0;
+	QLineEdit *addressBar = findChild<QLineEdit *>("addressBar");
+	Navpage *currentpage = (Navpage *)(tabWidget->currentWidget());
+	addressBar->setText(currentpage->get_current_dir());
+	return 0;
 }

@@ -8,6 +8,7 @@ class Navpage : public QWidget
 	Q_OBJECT
 private:
 	QString current_dir;
+
 public:
 	explicit Navpage(QWidget *parent = nullptr);
 	int change_dir(QString new_dir);
@@ -16,7 +17,6 @@ public:
 		return current_dir;
 	}
 signals:
-
 };
 
 #endif // NAVPAGE_H
