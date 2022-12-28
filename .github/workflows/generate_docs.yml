@@ -40,7 +40,10 @@ jobs:
         cd ..
         rm -rf doxygen-1.9.5
         rm doxygen-1.9.5.linux.bin.tar.gz
-      
+
+    - name: Install graphviz
+      run: sudo apt-get install graphviz
+
     - name: Remove existing files
       run: rm -rf docs
       
