@@ -1,7 +1,5 @@
 var NAVTREEINDEX0 =
 {
-"Navpage_8h.html":[2,0,0,4],
-"Navpage_8h_source.html":[2,0,0,4],
 "annotated.html":[1,0],
 "classMainWindow.html":[1,0,0],
 "classMainWindow.html#a996c5a2b6f77944776856f08ec30858d":[1,0,0,0],
@@ -27,5 +25,7 @@ var NAVTREEINDEX0 =
 "namespaceUi.html":[0,0,0],
 "namespaces.html":[0,0],
 "navpage_8cpp.html":[2,0,0,3],
+"navpage_8h.html":[2,0,0,4],
+"navpage_8h_source.html":[2,0,0,4],
 "pages.html":[]
 };

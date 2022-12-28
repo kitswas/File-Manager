@@ -1,4 +1,4 @@
-var Navpage_8h =
+var navpage_8h =
 [
     [ "Navpage", "classNavpage.html", "classNavpage" ]
 ];
