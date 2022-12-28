@@ -77,16 +77,6 @@
          <property name="tabsClosable">
           <bool>true</bool>
          </property>
-         <widget class="QWidget" name="tab">
-          <attribute name="title">
-           <string>Tab 1</string>
-          </attribute>
-         </widget>
-         <widget class="QWidget" name="tab_2">
-          <attribute name="title">
-           <string>Tab 2</string>
-          </attribute>
-         </widget>
         </widget>
        </item>
       </layout>
@@ -110,6 +100,8 @@
     <addaction name="actionNew_file"/>
     <addaction name="actionNew_folder"/>
     <addaction name="separator"/>
+    <addaction name="actionNew_tab"/>
+    <addaction name="separator"/>
     <addaction name="actionExit"/>
    </widget>
    <addaction name="menuFile"/>
@@ -128,6 +120,11 @@
   <action name="actionExit">
    <property name="text">
     <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionNew_tab">
+   <property name="text">
+    <string>New tab</string>
    </property>
   </action>
  </widget>
