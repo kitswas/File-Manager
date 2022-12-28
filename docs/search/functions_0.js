@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['change_5fdir_0',['change_dir',['../classNavpage.html#a9ecbb7921a88681628ed52e5ea4a49bc',1,'Navpage']]]
+  ['add_5fpage_5fto_5ftabpanel_0',['add_page_to_tabpanel',['../classMainWindow.html#a7c7ffcd327649dd5d4ca30596fb8809a',1,'MainWindow']]]
 ];

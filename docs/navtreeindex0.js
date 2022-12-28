@@ -2,6 +2,7 @@ var NAVTREEINDEX0 =
 {
 "annotated.html":[1,0],
 "classMainWindow.html":[1,0,0],
+"classMainWindow.html#a7c7ffcd327649dd5d4ca30596fb8809a":[1,0,0,2],
 "classMainWindow.html#a996c5a2b6f77944776856f08ec30858d":[1,0,0,0],
 "classMainWindow.html#ae98d00a93bc118200eeef9f9bba1dba7":[1,0,0,1],
 "classNavpage.html":[1,0,1],
