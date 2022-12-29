@@ -1,9 +1,10 @@
 #include "mainwindow.h"
-#include "ui_mainwindow.h"
 #include "navpage.h"
-#include <QTabWidget>
-#include <QLineEdit>
+#include "ui_mainwindow.h"
 #include <QDir>
+#include <QLineEdit>
+#include <QMessageBox >
+#include <QTabWidget>
 
 MainWindow::MainWindow(QWidget *parent)
 	: QMainWindow(parent), ui(new Ui::MainWindow)
@@ -54,11 +55,19 @@ void MainWindow::on_addressBar_returnPressed()
 {
 	QLineEdit *addressBar = findChild<QLineEdit *>("addressBar");
 	QDir *path = new QDir(addressBar->text());
-	QTabWidget *tabWidget = findChild<QTabWidget *>("tabWidget");
-	Navpage *currentpage = (Navpage *) (tabWidget->currentWidget());
-	if (currentpage != nullptr) {
-		currentpage->change_dir(path->absolutePath());
-		tabWidget->setTabText(tabWidget->currentIndex(), path->dirName());
+	if (path->exists()) {
+		QTabWidget *tabWidget = findChild<QTabWidget *>("tabWidget");
+		Navpage *currentpage = (Navpage *) (tabWidget->currentWidget());
+		if (currentpage != nullptr) {
+			currentpage->change_dir(path->absolutePath());
+			tabWidget->setTabText(tabWidget->currentIndex(), path->dirName());
+		}
+	} else {
+		QMessageBox *alert = new QMessageBox();
+		alert->setText("The folder does not exist.");
+		alert->setIcon(QMessageBox::Warning);
+		alert->exec();
+		delete alert;
 	}
 	delete path;
 }
