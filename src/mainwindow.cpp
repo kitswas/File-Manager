@@ -49,3 +49,16 @@ void MainWindow::on_tabWidget_tabCloseRequested(int index)
 	QTabWidget *tabWidget = findChild<QTabWidget *>("tabWidget");
 	tabWidget->removeTab(index);
 }
+
+void MainWindow::on_addressBar_returnPressed()
+{
+	QLineEdit *addressBar = findChild<QLineEdit *>("addressBar");
+	QDir *path = new QDir(addressBar->text());
+	QTabWidget *tabWidget = findChild<QTabWidget *>("tabWidget");
+	Navpage *currentpage = (Navpage *) (tabWidget->currentWidget());
+	if (currentpage != nullptr) {
+		currentpage->change_dir(path->absolutePath());
+		tabWidget->setTabText(tabWidget->currentIndex(), path->dirName());
+	}
+	delete path;
+}

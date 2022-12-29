@@ -29,6 +29,8 @@ private slots:
 
 	void on_tabWidget_tabCloseRequested(int index);
 
+	void on_addressBar_returnPressed();
+
 private:
 	Ui::MainWindow *ui;
 };
