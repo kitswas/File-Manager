@@ -27,13 +27,25 @@ int MainWindow::add_page_to_tabpanel(QString dir, const QString &label)
 	newpage->change_dir(dir);
 	QTabWidget *tabWidget = findChild<QTabWidget *>("tabWidget");
 	tabWidget->addTab(newpage, label);
-	QLineEdit *addressBar = findChild<QLineEdit *>("addressBar");
-	Navpage *currentpage = (Navpage *)(tabWidget->currentWidget());
-	addressBar->setText(currentpage->get_current_dir());
 	return 0;
 }
 
 void MainWindow::on_actionNew_tab_triggered()
 {
 	add_page_to_tabpanel(QDir::homePath(), "Home");
+}
+
+void MainWindow::on_tabWidget_currentChanged(int index)
+{
+	QTabWidget *tabWidget = findChild<QTabWidget *>("tabWidget");
+	QLineEdit *addressBar = findChild<QLineEdit *>("addressBar");
+	Navpage *currentpage = (Navpage *)(tabWidget->currentWidget());
+	if (currentpage != nullptr)
+		addressBar->setText(currentpage->get_current_dir());
+}
+
+void MainWindow::on_tabWidget_tabCloseRequested(int index)
+{
+	QTabWidget *tabWidget = findChild<QTabWidget *>("tabWidget");
+	tabWidget->removeTab(index);
 }
