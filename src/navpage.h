@@ -13,7 +13,7 @@ private:
 public:
 	explicit Navpage(QWidget *parent = nullptr);
 	int change_dir(QString new_dir);
-	inline QString get_current_dir() { return current_dir->absolutePath(); }
+	inline QString get_current_dir() const { return current_dir->absolutePath(); }
 signals:
 };
 
