@@ -4,17 +4,23 @@
 #include <QDir>
 #include <QWidget>
 
+namespace Ui {
+class Navpage;
+}
+
 class Navpage : public QWidget
 {
 	Q_OBJECT
-private:
-	QDir *current_dir;
 
 public:
 	explicit Navpage(QWidget *parent = nullptr);
+	~Navpage();
 	int change_dir(QString new_dir);
 	inline QString get_current_dir() const { return current_dir->absolutePath(); }
-signals:
+
+private:
+	Ui::Navpage *ui;
+	QDir *current_dir;
 };
 
 #endif // NAVPAGE_H
