@@ -38,8 +38,10 @@ void MainWindow::on_actionNew_tab_triggered()
 void MainWindow::on_tabWidget_currentChanged(int index)
 {
 	Navpage *currentpage = (Navpage *) (ui->tabWidget->currentWidget());
-	if (currentpage != nullptr)
+	if (currentpage != nullptr) {
 		ui->addressBar->setText(currentpage->get_current_dir());
+		QDir::setCurrent(currentpage->get_current_dir());
+	}
 }
 
 void MainWindow::on_tabWidget_tabCloseRequested(int index)
