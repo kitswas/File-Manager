@@ -2,14 +2,34 @@
 #include "navpage.h"
 #include "ui_mainwindow.h"
 #include <QDir>
+#include <QFileSystemModel>
 #include <QLineEdit>
-#include <QMessageBox >
+#include <QMessageBox>
 #include <QTabWidget>
 
 MainWindow::MainWindow(QWidget *parent)
 	: QMainWindow(parent), ui(new Ui::MainWindow)
 {
 	ui->setupUi(this);
+	/*ui->treeWidget->setColumnCount(1);
+	QList<QTreeWidgetItem> drives;
+	for (auto &item : QDir::drives()) {
+		drives.append(new QTreeWidgetItem());
+	}*/
+	//	ui->treeWidget->addTopLevelItems();
+	QFileSystemModel *model = new QFileSystemModel;
+	model->setRootPath(QDir::currentPath());
+	ui->treeView->setModel(model);
+	ui->treeView->setUniformRowHeights(true);
+	QHeaderView *header = ui->treeView->header();
+	for (int i = 1; i < header->count(); ++i) {
+		header->hideSection(i);
+	}
+	auto index = model->index(QDir::currentPath());
+	ui->treeView->selectionModel()->select(index,
+	                                       QItemSelectionModel::ClearAndSelect
+	                                           | QItemSelectionModel::Rows);
+	ui->treeView->resizeColumnToContents(0);
 }
 
 MainWindow::~MainWindow()
