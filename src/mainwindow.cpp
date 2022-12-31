@@ -71,7 +71,7 @@ void MainWindow::on_actionNew_tab_triggered()
 	add_page_to_tabpanel(QDir::homePath(), "Home");
 }
 
-void MainWindow::on_tabWidget_currentChanged(int index)
+void MainWindow::on_tabWidget_currentChanged([[maybe_unused]] int index)
 {
 	Navpage *currentpage = (Navpage *) (ui->tabWidget->currentWidget());
 	if (currentpage != nullptr) {
