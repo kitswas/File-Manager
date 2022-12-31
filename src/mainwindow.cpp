@@ -73,7 +73,7 @@ void MainWindow::on_actionNew_tab_triggered()
 
 void MainWindow::on_tabWidget_currentChanged([[maybe_unused]] int index)
 {
-	Navpage *currentpage = (Navpage *) (ui->tabWidget->currentWidget());
+	Navpage *currentpage = static_cast<Navpage *>(ui->tabWidget->currentWidget());
 	if (currentpage != nullptr) {
 		ui->addressBar->setText(currentpage->get_current_dir());
 		QDir::setCurrent(currentpage->get_current_dir());
@@ -89,7 +89,7 @@ void MainWindow::on_addressBar_returnPressed()
 {
 	QDir *path = new QDir(ui->addressBar->text());
 	if (path->exists()) {
-		Navpage *currentpage = (Navpage *) (ui->tabWidget->currentWidget());
+		Navpage *currentpage = static_cast<Navpage *>(ui->tabWidget->currentWidget());
 		if (currentpage != nullptr) {
 			currentpage->change_dir(path->absolutePath());
 			ui->tabWidget->setTabText(ui->tabWidget->currentIndex(), path->dirName());
@@ -107,7 +107,7 @@ void MainWindow::on_treeView_clicked(const QModelIndex &index)
 	QDir *path = new QDir(model->filePath(index));
 	if (path->exists()) {
 		ui->addressBar->setText(path->absolutePath());
-		Navpage *currentpage = (Navpage *) (ui->tabWidget->currentWidget());
+		Navpage *currentpage = static_cast<Navpage *>(ui->tabWidget->currentWidget());
 		if (currentpage != nullptr) {
 			currentpage->change_dir(path->absolutePath());
 			ui->tabWidget->setTabText(ui->tabWidget->currentIndex(), path->dirName());
