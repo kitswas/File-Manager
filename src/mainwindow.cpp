@@ -87,3 +87,24 @@ void MainWindow::on_addressBar_returnPressed()
 	}
 	delete path;
 }
+
+void MainWindow::on_treeView_clicked(const QModelIndex &index)
+{
+	QFileSystemModel *model = static_cast<QFileSystemModel *>(ui->treeView->model());
+	QDir *path = new QDir(model->filePath(index));
+	if (path->exists()) {
+		ui->addressBar->setText(path->absolutePath());
+		Navpage *currentpage = (Navpage *) (ui->tabWidget->currentWidget());
+		if (currentpage != nullptr) {
+			currentpage->change_dir(path->absolutePath());
+			ui->tabWidget->setTabText(ui->tabWidget->currentIndex(), path->dirName());
+		}
+	} else {
+		QMessageBox *alert = new QMessageBox();
+		alert->setText("The folder does not exist.");
+		alert->setIcon(QMessageBox::Warning);
+		alert->exec();
+		delete alert;
+	}
+	delete path;
+}
