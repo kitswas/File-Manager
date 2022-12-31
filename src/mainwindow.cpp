@@ -82,6 +82,7 @@ void MainWindow::on_tabWidget_currentChanged([[maybe_unused]] int index)
 	Navpage *currentpage = static_cast<Navpage *>(ui->tabWidget->currentWidget());
 	if (currentpage != nullptr) {
 		ui->addressBar->setText(currentpage->get_current_dir());
+		locate_in_tree(currentpage->get_current_dir());
 		QDir::setCurrent(currentpage->get_current_dir());
 	}
 }
