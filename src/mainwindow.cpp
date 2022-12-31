@@ -113,7 +113,7 @@ void MainWindow::on_treeView_clicked(const QModelIndex &index)
 			ui->tabWidget->setTabText(ui->tabWidget->currentIndex(), path->dirName());
 		}
 	} else {
-		show_warning("The folder does not exist.");
+		show_warning("This is not a folder.");
 	}
 	delete path;
 }
