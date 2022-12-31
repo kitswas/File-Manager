@@ -18,6 +18,12 @@ MainWindow::MainWindow(QWidget *parent)
 		drives.append(new QTreeWidgetItem());
 	}*/
 	//	ui->treeWidget->addTopLevelItems();
+
+	for (auto &item : QDir::drives()) {
+		qDebug() << item;
+		// This clearly shows that QDir::drives() doesn't detect connected MTP Devices
+	}
+
 	QFileSystemModel *model = new QFileSystemModel;
 	//	model->setRootPath(QDir::currentPath());
 	qDebug() << "setRootPath" << QDir::rootPath();
