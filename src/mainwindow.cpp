@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "navpage.h"
 #include "ui_mainwindow.h"
+#include <QDebug>
 #include <QDir>
 #include <QFileSystemModel>
 #include <QLineEdit>
@@ -18,16 +19,19 @@ MainWindow::MainWindow(QWidget *parent)
 	}*/
 	//	ui->treeWidget->addTopLevelItems();
 	QFileSystemModel *model = new QFileSystemModel;
-	model->setRootPath(QDir::currentPath());
+	//	model->setRootPath(QDir::currentPath());
+	qDebug() << "setRootPath" << QDir::rootPath();
+	model->setRootPath(QDir::rootPath());
 	ui->treeView->setModel(model);
 	QHeaderView *header = ui->treeView->header();
 	for (int i = 1; i < header->count(); ++i) {
 		header->hideSection(i);
 	}
-	auto index = model->index(QDir::currentPath());
-	ui->treeView->selectionModel()->select(index,
-	                                       QItemSelectionModel::ClearAndSelect
-	                                           | QItemSelectionModel::Rows);
+	ui->treeView->setSelectionMode(QAbstractItemView::SingleSelection);
+	ui->treeView->setSelectionBehavior(QAbstractItemView::SelectRows);
+	//	QModelIndex index = model->index(QDir::currentPath());
+	//	qDebug() << "index" << index;
+
 	ui->treeView->resizeColumnToContents(0);
 }
 
@@ -47,6 +51,19 @@ int MainWindow::add_page_to_tabpanel(QString dir, const QString &label)
 	newpage->change_dir(dir);
 	ui->tabWidget->addTab(newpage, label);
 	return 0;
+}
+
+void MainWindow::locate_in_tree(const QString &path)
+{
+	QFileSystemModel *model = static_cast<QFileSystemModel *>(ui->treeView->model());
+	QDir dir(path);
+	while (dir.cdUp()) {
+		auto index = model->index(dir.path());
+		ui->treeView->expand(index);
+	}
+	auto index = model->index(path);
+	ui->treeView->selectionModel()->select(index, QItemSelectionModel::ClearAndSelect);
+	ui->treeView->update();
 }
 
 void MainWindow::on_actionNew_tab_triggered()
@@ -76,6 +93,7 @@ void MainWindow::on_addressBar_returnPressed()
 		if (currentpage != nullptr) {
 			currentpage->change_dir(path->absolutePath());
 			ui->tabWidget->setTabText(ui->tabWidget->currentIndex(), path->dirName());
+			locate_in_tree(currentpage->get_current_dir());
 		}
 	} else {
 		show_warning("The folder does not exist.");

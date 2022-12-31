@@ -35,6 +35,7 @@ private slots:
 
 private:
 	Ui::MainWindow *ui;
+	void locate_in_tree(const QString &path);
 	void show_warning(const QString &message);
 };
 #endif // MAINWINDOW_H
