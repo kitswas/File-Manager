@@ -20,7 +20,6 @@ MainWindow::MainWindow(QWidget *parent)
 	QFileSystemModel *model = new QFileSystemModel;
 	model->setRootPath(QDir::currentPath());
 	ui->treeView->setModel(model);
-	ui->treeView->setUniformRowHeights(true);
 	QHeaderView *header = ui->treeView->header();
 	for (int i = 1; i < header->count(); ++i) {
 		header->hideSection(i);
@@ -82,6 +81,7 @@ void MainWindow::on_addressBar_returnPressed()
 		QMessageBox *alert = new QMessageBox();
 		alert->setText("The folder does not exist.");
 		alert->setIcon(QMessageBox::Warning);
+		alert->setWindowIcon(windowIcon());
 		alert->exec();
 		delete alert;
 	}

@@ -59,6 +59,12 @@
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
+         <property name="uniformRowHeights">
+          <bool>true</bool>
+         </property>
+         <property name="headerHidden">
+          <bool>true</bool>
+         </property>
         </widget>
        </item>
        <item>
