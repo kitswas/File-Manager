@@ -78,12 +78,7 @@ void MainWindow::on_addressBar_returnPressed()
 			ui->tabWidget->setTabText(ui->tabWidget->currentIndex(), path->dirName());
 		}
 	} else {
-		QMessageBox *alert = new QMessageBox();
-		alert->setText("The folder does not exist.");
-		alert->setIcon(QMessageBox::Warning);
-		alert->setWindowIcon(windowIcon());
-		alert->exec();
-		delete alert;
+		show_warning("The folder does not exist.");
 	}
 	delete path;
 }
@@ -100,11 +95,17 @@ void MainWindow::on_treeView_clicked(const QModelIndex &index)
 			ui->tabWidget->setTabText(ui->tabWidget->currentIndex(), path->dirName());
 		}
 	} else {
-		QMessageBox *alert = new QMessageBox();
-		alert->setText("The folder does not exist.");
-		alert->setIcon(QMessageBox::Warning);
-		alert->exec();
-		delete alert;
+		show_warning("The folder does not exist.");
 	}
 	delete path;
+}
+
+void MainWindow::show_warning(const QString &message)
+{
+	QMessageBox *alert = new QMessageBox();
+	alert->setText(message);
+	alert->setIcon(QMessageBox::Warning);
+	alert->setWindowIcon(windowIcon());
+	alert->exec();
+	delete alert;
 }

@@ -35,5 +35,6 @@ private slots:
 
 private:
 	Ui::MainWindow *ui;
+	void show_warning(const QString &message);
 };
 #endif // MAINWINDOW_H
