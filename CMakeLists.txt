@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.5)
 
 project(File-Manager VERSION 0.1 LANGUAGES CXX)
+# TODO Update to Qt 6.5 for Windows Dark Mode Support as soon as it is released
 
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
