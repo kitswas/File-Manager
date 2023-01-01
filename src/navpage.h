@@ -1,6 +1,8 @@
 #ifndef NAVPAGE_H
 #define NAVPAGE_H
 
+#include "mainwindow.h"
+
 #include <QAbstractItemView>
 #include <QDir>
 #include <QFileSystemModel>
@@ -15,13 +17,14 @@ class Navpage : public QWidget
 	Q_OBJECT
 
 public:
-	explicit Navpage(QFileSystemModel *model, QWidget *parent = nullptr);
+	explicit Navpage(QFileSystemModel *model, MainWindow *root, QWidget *parent = nullptr);
 	~Navpage();
 	int change_dir(QString new_dir);
 	inline QString get_current_dir() const { return current_dir->absolutePath(); }
 
 private:
 	Ui::Navpage *ui;
+	MainWindow *root;
 	QDir *current_dir;
 	QAbstractItemView *dirView;
 	QLayout *layout;

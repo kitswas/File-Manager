@@ -40,5 +40,7 @@ private:
 	bool check_n_change_dir(const QString &path, CDSource source);
 	void locate_in_tree(const QString &path);
 	void show_warning(const QString &message);
+
+	friend class Navpage;
 };
 #endif // MAINWINDOW_H

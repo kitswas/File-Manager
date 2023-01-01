@@ -8,8 +8,8 @@
 #include <QTableView>
 #include <QTreeView>
 
-Navpage::Navpage(QFileSystemModel *model, QWidget *parent)
-	: QWidget(parent), ui(new Ui::Navpage), model(model)
+Navpage::Navpage(QFileSystemModel *model, MainWindow *root, QWidget *parent)
+	: QWidget(parent), ui(new Ui::Navpage), root(root), model(model)
 {
 	ui->setupUi(this);
 	layout = new QHBoxLayout(this);
@@ -37,7 +37,6 @@ Navpage::~Navpage()
 int Navpage::change_dir(QString new_dir)
 {
 	current_dir = new QDir(new_dir);
-	QDir::setCurrent(get_current_dir());
 	auto index = model->index(QDir::currentPath());
 	qDebug() << index;
 	dirView->setRootIndex(index);
@@ -68,5 +67,9 @@ void Navpage::set_up_dirview()
 void Navpage::dirView_open_item(const QModelIndex &index)
 {
 	qDebug() << index;
-	change_dir(model->filePath(index));
+	if (root->check_n_change_dir(model->filePath(index), MainWindow::CDSource::Navpage))
+		change_dir(model->filePath(index));
+	else {
+		//TODO open as a file
+	}
 }
