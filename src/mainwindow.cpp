@@ -1,9 +1,7 @@
-#include "mainwindow.h"
 #include "navpage.h"
 #include "ui_mainwindow.h"
+
 #include <QDebug>
-#include <QDir>
-#include <QFileSystemModel>
 #include <QLineEdit>
 #include <QMessageBox>
 #include <QTabWidget>

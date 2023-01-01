@@ -2,7 +2,6 @@
 #include "ui_navpage.h"
 
 #include <QColumnView>
-#include <QFileSystemModel>
 #include <QLayout>
 #include <QListView>
 #include <QTableView>
