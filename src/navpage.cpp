@@ -35,6 +35,10 @@ Navpage::~Navpage()
 int Navpage::change_dir(QString new_dir)
 {
 	current_dir = new QDir(new_dir);
+	QDir::setCurrent(get_current_dir());
+	auto index = model->index(QDir::currentPath());
+	qDebug() << index;
+	dirView->setRootIndex(index);
 	return 0;
 }
 
