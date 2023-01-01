@@ -10,8 +10,8 @@ You will need a Qt account to download Qt. If you don't have one, you can [creat
 
 2. Run the installer and follow the instructions.
 
-3. Select the following components:
-![image showing components selected](https://user-images.githubusercontent.com/90329875/210178913-24706279-db3d-4fb2-95c6-02f3287e383a.png)
+3. Select the following components:  
+![image showing components selected](https://user-images.githubusercontent.com/90329875/210178913-24706279-db3d-4fb2-95c6-02f3287e383a.png)  
     - Qt 6.4 latest (Desktop components only)
     - MinGW 11.2.0 64-bit
     - Qt Creator latest
@@ -33,16 +33,16 @@ and add it to your system path.
 
 1. Open Qt Creator.
 
-2. Select the **Help** menu and click on **About Plugins...**.
+2. Select the **Help** menu and click on **About Plugins...**.  
 ![screenshot](https://user-images.githubusercontent.com/90329875/210179722-64601873-0796-420b-829c-77d22a016dfe.png)
 
-3. In the dialog that opens, check **ClangFormat** under **C++** and click **Ok**.
+3. In the dialog that opens, check **ClangFormat** under **C++** and click **Ok**.  
 ![screenshot of the Plugins window](https://user-images.githubusercontent.com/90329875/210179781-d2980aaa-a18c-4c86-ad3e-c7194a333f63.png)
 
 4. Select the **Edit** menu and click on **Preferences...**.
 
-5. In the dialog that opens, open the **Code Style** tab under **C++**. Change the settings to match the following:
-![screenshot of the Preferences window](https://user-images.githubusercontent.com/90329875/210179964-90d5a3dc-4f9a-473b-996c-838d081deba7.png)
+5. In the dialog that opens, open the **Code Style** tab under **C++**. Change the settings to match the following:  
+![screenshot of the Preferences window](https://user-images.githubusercontent.com/90329875/210179964-90d5a3dc-4f9a-473b-996c-838d081deba7.png)  
     Global settings:
     - Formatting mode - Full formatting
     - Format edited code on save - checked
