@@ -113,11 +113,11 @@ void MainWindow::on_treeView_clicked(const QModelIndex &index)
 	QFileSystemModel *model = static_cast<QFileSystemModel *>(ui->treeView->model());
 	QDir *path = new QDir(model->filePath(index));
 	if (path->exists()) {
-		ui->addressBar->setText(path->absolutePath());
 		Navpage *currentpage = static_cast<Navpage *>(ui->tabWidget->currentWidget());
 		if (currentpage != nullptr) {
 			currentpage->change_dir(path->absolutePath());
 			ui->tabWidget->setTabText(ui->tabWidget->currentIndex(), path->dirName());
+			ui->addressBar->setText(path->absolutePath());
 		}
 	} else {
 		show_warning("This is not a folder.");
