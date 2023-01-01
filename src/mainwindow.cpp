@@ -59,6 +59,35 @@ int MainWindow::add_page_to_tabpanel(QString dir, const QString &label)
 	return 0;
 }
 
+bool MainWindow::check_n_change_dir(const QString &path, CDSource source)
+{
+	QDir *dir = new QDir(path);
+	QString message = "This is not a folder.";
+	if (dir->exists()) {
+		if (source != CDSource::Navtree) {
+			locate_in_tree(path);
+		}
+		if (source != CDSource::Navbar) {
+			ui->addressBar->setText(dir->absolutePath());
+		}
+		if (source != CDSource::Tabchange) {
+			Navpage *currentpage = static_cast<Navpage *>(ui->tabWidget->currentWidget());
+			if (currentpage != nullptr) {
+				currentpage->change_dir(dir->absolutePath());
+				ui->tabWidget->setTabText(ui->tabWidget->currentIndex(), dir->dirName());
+			}
+		}
+
+		QDir::setCurrent(path);
+		delete dir;
+		return true;
+	} else {
+		show_warning(message);
+		delete dir;
+		return false;
+	}
+}
+
 void MainWindow::locate_in_tree(const QString &path)
 {
 	QFileSystemModel *model = static_cast<QFileSystemModel *>(ui->treeView->model());
@@ -94,35 +123,13 @@ void MainWindow::on_tabWidget_tabCloseRequested(int index)
 
 void MainWindow::on_addressBar_returnPressed()
 {
-	QDir *path = new QDir(ui->addressBar->text());
-	if (path->exists()) {
-		Navpage *currentpage = static_cast<Navpage *>(ui->tabWidget->currentWidget());
-		if (currentpage != nullptr) {
-			currentpage->change_dir(path->absolutePath());
-			ui->tabWidget->setTabText(ui->tabWidget->currentIndex(), path->dirName());
-			locate_in_tree(currentpage->get_current_dir());
-		}
-	} else {
-		show_warning("The folder does not exist.");
-	}
-	delete path;
+	check_n_change_dir(ui->addressBar->text(), CDSource::Navbar);
 }
 
 void MainWindow::on_treeView_clicked(const QModelIndex &index)
 {
 	QFileSystemModel *model = static_cast<QFileSystemModel *>(ui->treeView->model());
-	QDir *path = new QDir(model->filePath(index));
-	if (path->exists()) {
-		Navpage *currentpage = static_cast<Navpage *>(ui->tabWidget->currentWidget());
-		if (currentpage != nullptr) {
-			currentpage->change_dir(path->absolutePath());
-			ui->tabWidget->setTabText(ui->tabWidget->currentIndex(), path->dirName());
-			ui->addressBar->setText(path->absolutePath());
-		}
-	} else {
-		show_warning("This is not a folder.");
-	}
-	delete path;
+	check_n_change_dir(model->filePath(index), CDSource::Navtree);
 }
 
 void MainWindow::show_warning(const QString &message)

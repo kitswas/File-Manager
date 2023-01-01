@@ -20,6 +20,8 @@ public:
 
 	int add_page_to_tabpanel(QString dir, const QString &label);
 
+	enum class CDSource { Navbar, Navpage, Navtree, Tabchange };
+
 private slots:
 	void on_actionExit_triggered();
 
@@ -35,6 +37,7 @@ private slots:
 
 private:
 	Ui::MainWindow *ui;
+	bool check_n_change_dir(const QString &path, CDSource source);
 	void locate_in_tree(const QString &path);
 	void show_warning(const QString &message);
 };
