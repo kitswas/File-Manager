@@ -23,6 +23,8 @@ Navpage::Navpage(QFileSystemModel *model, QWidget *parent)
 	dirView = static_cast<QAbstractItemView *>(view);
 	layout->addWidget(dirView);
 	set_up_dirview();
+
+	connect(dirView, &QAbstractItemView::doubleClicked, this, &Navpage::dirView_open_item);
 }
 
 Navpage::~Navpage()
@@ -61,4 +63,10 @@ void Navpage::set_up_dirview()
 	auto index = model->index(QDir::currentPath());
 	qDebug() << index;
 	dirView->setRootIndex(index);
+}
+
+void Navpage::dirView_open_item(const QModelIndex &index)
+{
+	qDebug() << index;
+	change_dir(model->filePath(index));
 }

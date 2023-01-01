@@ -28,6 +28,9 @@ private:
 	QFileSystemModel *model;
 
 	void set_up_dirview();
+
+private slots:
+	void dirView_open_item(const QModelIndex &index);
 };
 
 #endif // NAVPAGE_H
