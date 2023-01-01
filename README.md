@@ -1,5 +1,15 @@
 # File-Manager
 
+## Introduction
+
+This is a simple file manager written in C++ using Qt 6.  
+It is an educational project for learning Qt and C++.  
+*Warranty **not** included.* Use it at your own risk.
+
+## Setup
+
+See the [Setup Guide](Setup_Guide.md).
+
 ## Generating Documentation
 
 This project uses [Doxygen](https://www.doxygen.nl/index.html) to generate documentation.  
