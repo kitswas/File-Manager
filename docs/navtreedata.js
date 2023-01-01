@@ -25,6 +25,11 @@
 var NAVTREE =
 [
   [ "File Manager", "index.html", [
+    [ "File-Manager", "index.html", [
+      [ "Introduction", "index.html#autotoc_md1", null ],
+      [ "Setup", "index.html#autotoc_md2", null ],
+      [ "Generating Documentation", "index.html#autotoc_md3", null ]
+    ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ]
     ] ],
