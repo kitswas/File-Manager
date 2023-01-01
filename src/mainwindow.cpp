@@ -53,7 +53,7 @@ void MainWindow::on_actionExit_triggered()
 
 int MainWindow::add_page_to_tabpanel(QString dir, const QString &label)
 {
-	Navpage *newpage = new Navpage();
+	Navpage *newpage = new Navpage(static_cast<QFileSystemModel *>(ui->treeView->model()));
 	newpage->change_dir(dir);
 	ui->tabWidget->addTab(newpage, label);
 	return 0;
