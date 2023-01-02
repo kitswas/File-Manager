@@ -19,6 +19,8 @@ Navpage::Navpage(QFileSystemModel *model, MainWindow *root, QWidget *parent)
 	view->setViewMode(QListView::IconMode);
 	view->setMovement(QListView::Static);
 	view->setResizeMode(QListView::Adjust);
+	view->setLayoutMode(QListView::Batched);
+	view->setBatchSize(10);
 	dirView = static_cast<QAbstractItemView *>(view);
 	layout->addWidget(dirView);
 	set_up_dirview();
