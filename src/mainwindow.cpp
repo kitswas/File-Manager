@@ -1,3 +1,4 @@
+#include "mainwindow.h"
 #include "navpage.h"
 #include "ui_mainwindow.h"
 
