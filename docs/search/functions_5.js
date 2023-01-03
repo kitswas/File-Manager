@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['_7emainwindow_0',['~MainWindow',['../classMainWindow.html#ae98d00a93bc118200eeef9f9bba1dba7',1,'MainWindow']]],
-  ['_7enavpage_1',['~Navpage',['../classNavpage.html#a3ec05c8142f75b58faaaea004891e3f5',1,'Navpage']]]
+  ['to_5fhigher_5funit_5ffrom_5fbytes_0',['to_higher_unit_from_bytes',['../utils_8h.html#a9f343d852f7b30a7389107271161c692',1,'utils.h']]]
 ];
