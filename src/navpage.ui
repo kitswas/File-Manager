@@ -25,6 +25,7 @@
   <property name="acceptDrops">
    <bool>true</bool>
   </property>
+  <layout class="QVBoxLayout" name="verticalLayout"/>
  </widget>
  <resources/>
  <connections/>

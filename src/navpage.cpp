@@ -11,8 +11,7 @@ Navpage::Navpage(QFileSystemModel *model, MainWindow *root, QWidget *parent)
 	: QWidget(parent), ui(new Ui::Navpage), root(root), model(model)
 {
 	ui->setupUi(this);
-	layout = new QHBoxLayout(this);
-	setLayout(layout);
+
 	QListView *view = new QListView();
 	view->setUniformItemSizes(true);
 	view->setWordWrap(true);
@@ -22,7 +21,7 @@ Navpage::Navpage(QFileSystemModel *model, MainWindow *root, QWidget *parent)
 	view->setLayoutMode(QListView::Batched);
 	view->setBatchSize(10);
 	dirView = static_cast<QAbstractItemView *>(view);
-	layout->addWidget(dirView);
+	ui->verticalLayout->insertWidget(0, dirView);
 	set_up_dirview();
 
 	connect(dirView, &QAbstractItemView::doubleClicked, this, &Navpage::dirView_open_item);

@@ -27,7 +27,6 @@ private:
 	MainWindow *root;
 	QDir *current_dir;
 	QAbstractItemView *dirView;
-	QLayout *layout;
 	QFileSystemModel *model;
 
 	void set_up_dirview();
