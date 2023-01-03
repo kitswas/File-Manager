@@ -21,8 +21,10 @@ Navpage::Navpage(QFileSystemModel *model, MainWindow *root, QWidget *parent)
 	view->setLayoutMode(QListView::Batched);
 	view->setBatchSize(10);
 	dirView = static_cast<QAbstractItemView *>(view);
-	ui->verticalLayout->insertWidget(0, dirView);
+	driveInfo = new DriveInfo(this);
 	set_up_dirview();
+	ui->verticalLayout->addWidget(dirView);
+	ui->verticalLayout->addWidget(driveInfo);
 
 	connect(dirView, &QAbstractItemView::doubleClicked, this, &Navpage::dirView_open_item);
 }
@@ -31,6 +33,7 @@ Navpage::~Navpage()
 {
 	delete ui;
 	delete dirView;
+	delete driveInfo;
 	delete current_dir;
 }
 
@@ -40,6 +43,7 @@ int Navpage::change_dir(QString new_dir)
 	auto index = model->index(QDir::currentPath());
 	qDebug() << index;
 	dirView->setRootIndex(index);
+	driveInfo->refreshDrive();
 	return 0;
 }
 

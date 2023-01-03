@@ -29,6 +29,9 @@ set(PROJECT_SOURCES
         src/navpage.h
         src/navpage.cpp
         src/navpage.ui
+        src/driveinfo.h
+        src/driveinfo.cpp
+        src/driveinfo.ui
         src/utils.h
         resources/Icon.qrc
 )

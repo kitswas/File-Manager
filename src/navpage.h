@@ -1,6 +1,7 @@
 #ifndef NAVPAGE_H
 #define NAVPAGE_H
 
+#include "driveinfo.h"
 #include "mainwindow.h"
 
 #include <QAbstractItemView>
@@ -24,6 +25,7 @@ public:
 
 private:
 	Ui::Navpage *ui;
+	DriveInfo *driveInfo;
 	MainWindow *root;
 	QDir *current_dir;
 	QAbstractItemView *dirView;
