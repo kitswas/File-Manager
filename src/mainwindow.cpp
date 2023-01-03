@@ -63,6 +63,8 @@ bool MainWindow::check_n_change_dir(const QString &path, CDSource source)
 	QDir *dir = new QDir(path);
 	QString message = "This is not a folder.";
 	if (dir->exists()) {
+		QDir::setCurrent(path);
+
 		if (source != CDSource::Navtree) {
 			locate_in_tree(path);
 		}
@@ -77,7 +79,6 @@ bool MainWindow::check_n_change_dir(const QString &path, CDSource source)
 			}
 		}
 
-		QDir::setCurrent(path);
 		delete dir;
 		return true;
 	} else {
