@@ -29,6 +29,7 @@ set(PROJECT_SOURCES
         src/navpage.h
         src/navpage.cpp
         src/navpage.ui
+        src/utils.h
         resources/Icon.qrc
 )
 
