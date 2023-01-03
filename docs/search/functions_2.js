@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['format_5fbytes_0',['format_bytes',['../utils_8h.html#a9af16beef915b55c271253de24d3d2c1',1,'utils.h']]]
+  ['driveinfo_0',['DriveInfo',['../classDriveInfo.html#aeb6098190b6cebb19137df095ac35a9c',1,'DriveInfo']]]
 ];

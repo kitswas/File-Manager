@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['setting_20up_20your_20workspace_0',['Setting up your workspace',['../md_Setup_Guide.html',1,'']]],
-  ['setup_5fguide_2emd_1',['Setup_Guide.md',['../Setup__Guide_8md.html',1,'']]]
+  ['readme_2emd_0',['README.MD',['../README_8MD.html',1,'']]],
+  ['refreshdrive_1',['refreshDrive',['../classDriveInfo.html#adcb939a33cf8b511472121767859c77f',1,'DriveInfo']]]
 ];

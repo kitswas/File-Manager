@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['file_2dmanager_0',['File-Manager',['../index.html',1,'']]],
-  ['format_5fbytes_1',['format_bytes',['../utils_8h.html#a9af16beef915b55c271253de24d3d2c1',1,'utils.h']]]
+  ['driveinfo_0',['DriveInfo',['../classDriveInfo.html',1,'DriveInfo'],['../classDriveInfo.html#aeb6098190b6cebb19137df095ac35a9c',1,'DriveInfo::DriveInfo()']]],
+  ['driveinfo_2ecpp_1',['driveinfo.cpp',['../driveinfo_8cpp.html',1,'']]],
+  ['driveinfo_2eh_2',['driveinfo.h',['../driveinfo_8h.html',1,'']]]
 ];
