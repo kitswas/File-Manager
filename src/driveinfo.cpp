@@ -9,6 +9,7 @@ DriveInfo::DriveInfo(QWidget *parent)
 	, ui(new Ui::DriveInfo)
 {
 	ui->setupUi(this);
+	info = nullptr;
 }
 
 DriveInfo::~DriveInfo()
