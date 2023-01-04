@@ -42,20 +42,13 @@ and add it to your system path.
 4. Select the **Edit** menu and click on **Preferences...**.
 
 5. In the dialog that opens, open the **Code Style** tab under **C++**. Change the settings to match the following:  
-![screenshot of the Preferences window](https://user-images.githubusercontent.com/90329875/210179964-90d5a3dc-4f9a-473b-996c-838d081deba7.png)  
+![screenshot of the Preferences window](https://user-images.githubusercontent.com/90329875/210544267-9cb7a8b7-250d-496d-9e84-4775aed7fb88.png)  
     Global settings:
     - Formatting mode - Full formatting
     - Format edited code on save - checked
-    - Override Clang format configuration file - checked  
 
-    Current settings:  
-    Import the [style file](./qt2_styles.xml) and switch to Personal.
-    - TabWidth - 4
-    - IndentWidth - 4
-    - UseCRLF - true
-    - UseTab - AlignWithSpaces
-
-    Click **Apply** and **Ok**.
+    Click **Apply** and **Ok**. Restart Qt Creator.  
+    Qt Creator should automatically detect the .clang-format file in the project root directory and use it for auto-formatting.
 
 ### Setting up the project
 
