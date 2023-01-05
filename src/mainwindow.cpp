@@ -126,7 +126,7 @@ void MainWindow::on_addressBar_returnPressed()
 	check_n_change_dir(ui->addressBar->text(), CDSource::Navbar);
 }
 
-void MainWindow::on_treeView_clicked(const QModelIndex &index)
+void MainWindow::on_treeView_activated(const QModelIndex &index)
 {
 	QFileSystemModel *model = static_cast<QFileSystemModel *>(ui->treeView->model());
 	check_n_change_dir(model->filePath(index), CDSource::Navtree);

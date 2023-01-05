@@ -33,7 +33,7 @@ private slots:
 
 	void on_addressBar_returnPressed();
 
-	void on_treeView_clicked(const QModelIndex &index);
+	void on_treeView_activated(const QModelIndex &index);
 
 private:
 	Ui::MainWindow *ui;
