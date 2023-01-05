@@ -11,12 +11,6 @@ MainWindow::MainWindow(QWidget *parent)
 	: QMainWindow(parent), ui(new Ui::MainWindow)
 {
 	ui->setupUi(this);
-	/*ui->treeWidget->setColumnCount(1);
-	QList<QTreeWidgetItem> drives;
-	for (auto &item : QDir::drives()) {
-		drives.append(new QTreeWidgetItem());
-	}*/
-	//	ui->treeWidget->addTopLevelItems();
 
 	for (auto &item : QDir::drives()) {
 		qDebug() << item;
