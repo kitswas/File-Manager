@@ -12,6 +12,8 @@ MainWindow::MainWindow(QWidget *parent)
 {
 	ui->setupUi(this);
 
+	visitedPaths.clear();
+
 	for (auto &item : QDir::drives()) {
 		qDebug() << item;
 		// This clearly shows that QDir::drives() doesn't detect connected MTP Devices
@@ -73,6 +75,7 @@ bool MainWindow::check_n_change_dir(const QString &path, CDSource source, bool s
 			}
 		}
 
+		visitedPaths.push_back(path);
 		delete dir;
 		return true;
 	} else {
