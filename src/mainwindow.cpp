@@ -51,6 +51,7 @@ int MainWindow::add_page_to_tabpanel(QString dir, const QString &label)
 	Navpage *newpage = new Navpage(static_cast<QFileSystemModel *>(ui->treeView->model()), this);
 	newpage->change_dir(dir);
 	ui->tabWidget->addTab(newpage, label);
+	visitedPaths.push_back(dir);
 	return 0;
 }
 
@@ -76,6 +77,7 @@ bool MainWindow::check_n_change_dir(const QString &path, CDSource source, bool s
 		}
 
 		visitedPaths.push_back(path);
+		qDebug() << visitedPaths.size();
 		delete dir;
 		return true;
 	} else {
@@ -139,3 +141,17 @@ void MainWindow::show_warning(const QString &message)
 	alert->exec();
 	delete alert;
 }
+
+void MainWindow::on_backButton_clicked()
+{
+	if (!visitedPaths.isEmpty()) {
+		visitedPaths.pop_back(); // Remove current path
+	}
+
+	if (!visitedPaths.isEmpty()) {
+		QString prev_path = visitedPaths.back();
+		visitedPaths.pop_back(); // Remove previous path
+		check_n_change_dir(prev_path, CDSource::Navbutton);
+	}
+}
+

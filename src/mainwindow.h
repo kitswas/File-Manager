@@ -21,7 +21,7 @@ public:
 
 	int add_page_to_tabpanel(QString dir, const QString &label);
 
-	enum class CDSource { Navbar, Navpage, Navtree, Tabchange };
+	enum class CDSource { Navbar, Navpage, Navtree, Navbutton, Tabchange };
 
 private slots:
 	void on_actionExit_triggered();
@@ -35,6 +35,8 @@ private slots:
 	void on_addressBar_returnPressed();
 
 	void on_treeView_activated(const QModelIndex &index);
+
+	void on_backButton_clicked();
 
 private:
 	Ui::MainWindow *ui;
