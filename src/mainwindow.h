@@ -37,7 +37,7 @@ private slots:
 
 private:
 	Ui::MainWindow *ui;
-	bool check_n_change_dir(const QString &path, CDSource source);
+	bool check_n_change_dir(const QString &path, CDSource source, bool suppress_warning = false);
 	void locate_in_tree(const QString &path);
 	void show_warning(const QString &message);
 

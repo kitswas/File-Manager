@@ -52,7 +52,7 @@ int MainWindow::add_page_to_tabpanel(QString dir, const QString &label)
 	return 0;
 }
 
-bool MainWindow::check_n_change_dir(const QString &path, CDSource source)
+bool MainWindow::check_n_change_dir(const QString &path, CDSource source, bool suppress_warning)
 {
 	QDir *dir = new QDir(path);
 	QString message = "This is not a folder.";
@@ -76,7 +76,8 @@ bool MainWindow::check_n_change_dir(const QString &path, CDSource source)
 		delete dir;
 		return true;
 	} else {
-		show_warning(message);
+		if (!suppress_warning)
+			show_warning(message);
 		delete dir;
 		return false;
 	}

@@ -71,9 +71,10 @@ void Navpage::set_up_dirview()
 void Navpage::dirView_open_item(const QModelIndex &index)
 {
 	qDebug() << index;
-	if (root->check_n_change_dir(model->filePath(index), MainWindow::CDSource::Navpage))
+	if (root->check_n_change_dir(model->filePath(index), MainWindow::CDSource::Navpage, true))
 		change_dir(model->filePath(index));
 	else {
+		qDebug() << "Should open the file here.";
 		//TODO open as a file
 	}
 }
