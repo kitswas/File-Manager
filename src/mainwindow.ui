@@ -46,6 +46,23 @@
         </widget>
        </item>
        <item>
+        <widget class="QCommandLinkButton" name="upButton">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>40</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="icon">
+          <iconset resource="../resources/Icon.qrc">
+           <normaloff>:/buttons/up.svg</normaloff>:/buttons/up.svg</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
         <widget class="QLineEdit" name="addressBar">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
