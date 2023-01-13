@@ -67,12 +67,14 @@ bool MainWindow::check_n_change_dir(const QString &path, CDSource source, bool s
 		}
 		if (source != CDSource::Navbar) {
 			ui->addressBar->setText(dir->absolutePath());
+			ui->addressBar->update();
 		}
 		if (source != CDSource::Tabchange) {
 			Navpage *currentpage = static_cast<Navpage *>(ui->tabWidget->currentWidget());
 			if (currentpage != nullptr) {
 				currentpage->change_dir(dir->absolutePath());
 				ui->tabWidget->setTabText(ui->tabWidget->currentIndex(), dir->dirName());
+				ui->tabWidget->update();
 			}
 		}
 
