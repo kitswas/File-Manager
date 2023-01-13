@@ -157,3 +157,9 @@ void MainWindow::on_backButton_clicked()
 	}
 }
 
+void MainWindow::on_upButton_clicked()
+{
+	QDir dir = QDir::current();
+	if (dir.cdUp())
+		check_n_change_dir(dir.absolutePath(), CDSource::Navbutton);
+}

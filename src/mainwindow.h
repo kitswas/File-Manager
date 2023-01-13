@@ -38,6 +38,8 @@ private slots:
 
 	void on_backButton_clicked();
 
+	void on_upButton_clicked();
+
 private:
 	Ui::MainWindow *ui;
 	QList<QString> visitedPaths;
