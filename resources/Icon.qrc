@@ -4,4 +4,9 @@
         <file>icon-folder.redx128.png</file>
         <file>icon-folder.redx512.png</file>
     </qresource>
+    <qresource prefix="/buttons">
+        <file>back.svg</file>
+        <file>forward.svg</file>
+        <file>up.svg</file>
+    </qresource>
 </RCC>
