@@ -40,6 +40,8 @@ private slots:
 
 	void on_upButton_clicked();
 
+	void on_actionNew_folder_triggered();
+
 private:
 	Ui::MainWindow *ui;
 	QList<QString> visitedPaths;

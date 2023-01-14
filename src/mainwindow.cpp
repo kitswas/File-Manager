@@ -3,6 +3,7 @@
 #include "ui_mainwindow.h"
 
 #include <QDebug>
+#include <QInputDialog>
 #include <QLineEdit>
 #include <QMessageBox>
 #include <QTabWidget>
@@ -162,4 +163,18 @@ void MainWindow::on_upButton_clicked()
 	QDir dir = QDir::current();
 	if (dir.cdUp())
 		check_n_change_dir(dir.absolutePath(), CDSource::Navbutton);
+}
+
+void MainWindow::on_actionNew_folder_triggered()
+{
+	bool ok;
+	QString path = QInputDialog::getText(this,
+	                                     tr("Create a new folder"),
+	                                     tr("Enter path:"),
+	                                     QLineEdit::Normal,
+	                                     tr("New folder"),
+	                                     &ok);
+	if (ok && !path.isEmpty()) {
+		// Complete this
+	}
 }
