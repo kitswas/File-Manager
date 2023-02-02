@@ -13,9 +13,11 @@ Navpage::Navpage(QFileSystemModel *model, MainWindow *root, QWidget *parent)
 	ui->setupUi(this);
 
 	QListView *view = new QListView();
-	view->setUniformItemSizes(true);
 	view->setWordWrap(true);
 	view->setViewMode(QListView::IconMode);
+	view->setIconSize(QSize(48, 48));
+	view->setGridSize(QSize(128, 72));
+	view->setUniformItemSizes(true);
 	view->setMovement(QListView::Static);
 	view->setResizeMode(QListView::Adjust);
 	view->setLayoutMode(QListView::Batched);
