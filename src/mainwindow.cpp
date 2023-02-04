@@ -3,6 +3,7 @@
 #include "ui_mainwindow.h"
 
 #include <QDebug>
+#include <QDir>
 #include <QInputDialog>
 #include <QLineEdit>
 #include <QMessageBox>
@@ -174,7 +175,15 @@ void MainWindow::on_actionNew_folder_triggered()
 	                                     QLineEdit::Normal,
 	                                     tr("New folder"),
 	                                     &ok);
+
 	if (ok && !path.isEmpty()) {
 		// Complete this
+		QDir dir;
+		if (!dir.exists(path)) {
+			dir.mkdir(path);
+			qDebug() << "Directory created successfully";
+		} else {
+			qDebug() << "Directory already exists";
+		}
 	}
 }
