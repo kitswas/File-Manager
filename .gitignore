@@ -74,3 +74,6 @@ CMakeLists.txt.user*
 
 # Build directories
 build*
+
+# The cache directory
+.cache
