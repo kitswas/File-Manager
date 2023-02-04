@@ -23,14 +23,18 @@ void DirItemInfo::refresh()
 	ui->name->setText(info->fileName());
 	ui->filesys->setText(info->filePath());
 	QString permissions = "";
-	qt_ntfs_permission_lookup++; // turn checking on
+	//	qDebug() << (new QStorageInfo(QDir::current()))->fileSystemType();
+	bool isNTFS = (new QStorageInfo(QDir::current()))->fileSystemType().compare("NTFS") == 0;
+	if (isNTFS)
+		qt_ntfs_permission_lookup++; // turn checking on
 	if (info->isReadable())
 		permissions += "Read ";
 	if (info->isWritable())
 		permissions += "Write ";
 	if (info->isExecutable())
 		permissions += "Execute ";
-	qt_ntfs_permission_lookup--; // turn it off again
+	if (isNTFS)
+		qt_ntfs_permission_lookup--; // turn it off again
 	ui->free_space->setText(permissions.trimmed());
 	ui->size->setText(format_bytes(info->size()));
 	//	info->permissions();
