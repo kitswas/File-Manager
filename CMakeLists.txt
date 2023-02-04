@@ -33,6 +33,7 @@ set(PROJECT_SOURCES
         src/driveinfo.cpp
         src/driveinfo.ui
         src/utils.h
+        src/utils.cpp
         resources/Icon.qrc
 )
 
