@@ -22,7 +22,7 @@
     </widget>
    </item>
    <item row="1" column="0">
-    <widget class="QLabel" name="label_filesys">
+    <widget class="QLabel" name="label_path">
      <property name="font">
       <font>
        <pointsize>12</pointsize>
@@ -52,7 +52,7 @@
     </widget>
    </item>
    <item row="0" column="2">
-    <widget class="QLabel" name="label_free_space">
+    <widget class="QLabel" name="label_permissions">
      <property name="font">
       <font>
        <pointsize>12</pointsize>
@@ -67,14 +67,14 @@
     </widget>
    </item>
    <item row="1" column="1">
-    <widget class="QLabel" name="filesys">
+    <widget class="QLabel" name="path">
      <property name="text">
       <string>TextLabel</string>
      </property>
     </widget>
    </item>
    <item row="0" column="3">
-    <widget class="QLabel" name="free_space">
+    <widget class="QLabel" name="permissions">
      <property name="text">
       <string>TextLabel</string>
      </property>

@@ -21,7 +21,7 @@ DirItemInfo::~DirItemInfo()
 void DirItemInfo::refresh()
 {
 	ui->name->setText(info->fileName());
-	ui->filesys->setText(info->filePath());
+	ui->path->setText(info->filePath());
 	QString permissions = "";
 	//	qDebug() << (new QStorageInfo(QDir::current()))->fileSystemType();
 	bool isNTFS = (new QStorageInfo(QDir::current()))->fileSystemType().compare("NTFS") == 0;
@@ -35,7 +35,7 @@ void DirItemInfo::refresh()
 		permissions += "Execute ";
 	if (isNTFS)
 		qt_ntfs_permission_lookup--; // turn it off again
-	ui->free_space->setText(permissions.trimmed());
+	ui->permissions->setText(permissions.trimmed());
 	ui->size->setText(format_bytes(info->size()));
 	//	info->permissions();
 }
