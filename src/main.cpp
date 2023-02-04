@@ -10,6 +10,6 @@ int main(int argc, char *argv[])
 	MainWindow w;
 	w.add_page_to_tabpanel(QDir::homePath(), "Home");
 	qDebug() << "Home" << QDir::homePath();
-	w.show();
+	w.showMaximized(); // Maximize on launch
 	return a.exec();
 }
