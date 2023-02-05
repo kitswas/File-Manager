@@ -7,5 +7,6 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "mainwindow.h", "mainwindow_8h.html", "mainwindow_8h" ],
     [ "navpage.cpp", "navpage_8cpp.html", null ],
     [ "navpage.h", "navpage_8h.html", "navpage_8h" ],
+    [ "utils.cpp", "utils_8cpp.html", "utils_8cpp" ],
     [ "utils.h", "utils_8h.html", "utils_8h" ]
 ];
