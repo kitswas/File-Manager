@@ -216,4 +216,39 @@ void MainWindow::on_actionDelete_triggered()
 	}
 }
 
-void MainWindow::on_actionRename_triggered() {}
+void MainWindow::on_actionRename_triggered()
+{
+	Navpage *currentpage = static_cast<Navpage *>(ui->tabWidget->currentWidget());
+	if (currentpage) {
+		QStringList selectedItems = currentpage->get_selection();
+		foreach (QString selectedItem, selectedItems) {
+			if (!selectedItem.isEmpty()) {
+				bool ok;
+				QFileInfo fileInfo(selectedItem);
+				QString newName = QInputDialog::getText(this,
+				                                        tr("Rename"),
+				                                        tr("New name:"),
+				                                        QLineEdit::Normal,
+				                                        fileInfo.completeBaseName(),
+				                                        &ok);
+				if (ok && !newName.isEmpty()) {
+					if (fileInfo.isDir()) {
+						QDir dir(selectedItem);
+						if (dir.rename(dir.dirName(), newName)) {
+							qDebug() << "Folder renamed successfully";
+						} else {
+							qDebug() << "Error renaming folder";
+						}
+					} else {
+						QFile file(selectedItem);
+						if (file.rename(newName)) {
+							qDebug() << "File renamed successfully";
+						} else {
+							qDebug() << "Error renaming file";
+						}
+					}
+				}
+			}
+		}
+	}
+}
