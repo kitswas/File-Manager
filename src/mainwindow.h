@@ -1,6 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include <QFileSystemModel>
 #include <QList>
 #include <QMainWindow>
 
@@ -43,6 +44,7 @@ private slots:
 private:
 	Ui::MainWindow *ui;
 	QList<QString> visitedPaths;
+	QFileSystemModel *FSmodel = new QFileSystemModel();
 
 	bool check_n_change_dir(const QString &path, CDSource source, bool suppress_warning = false);
 	void locate_in_tree(const QString &path);

@@ -19,11 +19,14 @@ MainWindow::MainWindow(QWidget *parent)
 		// This clearly shows that QDir::drives() doesn't detect connected MTP Devices
 	}
 
-	QFileSystemModel *model = new QFileSystemModel;
+	FSmodel = new QFileSystemModel();
 	//	model->setRootPath(QDir::currentPath());
 	qDebug() << "setRootPath" << QDir::rootPath();
-	model->setRootPath(QDir::rootPath());
-	ui->treeView->setModel(model);
+	FSmodel->setRootPath(QDir::rootPath());
+
+	//	QFileSystemModel *treeViewModel = new QFileSystemModel(FSmodel);
+	//	treeViewModel->setFilter(QDir::AllDirs | QDir::Drives);
+	ui->treeView->setModel(FSmodel);
 	QHeaderView *header = ui->treeView->header();
 	for (int i = 1; i < header->count(); ++i) {
 		header->hideSection(i);
@@ -48,7 +51,7 @@ void MainWindow::on_actionExit_triggered()
 
 int MainWindow::add_page_to_tabpanel(QString dir, const QString &label)
 {
-	Navpage *newpage = new Navpage(static_cast<QFileSystemModel *>(ui->treeView->model()), this);
+	Navpage *newpage = new Navpage(FSmodel, this);
 	newpage->change_dir(dir);
 	ui->tabWidget->addTab(newpage, label);
 	visitedPaths.push_back(dir);
@@ -92,13 +95,12 @@ bool MainWindow::check_n_change_dir(const QString &path, CDSource source, bool s
 
 void MainWindow::locate_in_tree(const QString &path)
 {
-	QFileSystemModel *model = static_cast<QFileSystemModel *>(ui->treeView->model());
 	QDir dir(path);
 	while (dir.cdUp()) {
-		auto index = model->index(dir.path());
+		auto index = FSmodel->index(dir.path());
 		ui->treeView->expand(index);
 	}
-	auto index = model->index(path);
+	auto index = FSmodel->index(path);
 	ui->treeView->selectionModel()->select(index, QItemSelectionModel::ClearAndSelect);
 	ui->treeView->update();
 }
@@ -130,8 +132,7 @@ void MainWindow::on_addressBar_returnPressed()
 
 void MainWindow::on_treeView_activated(const QModelIndex &index)
 {
-	QFileSystemModel *model = static_cast<QFileSystemModel *>(ui->treeView->model());
-	check_n_change_dir(model->filePath(index), CDSource::Navtree);
+	check_n_change_dir(FSmodel->filePath(index), CDSource::Navtree);
 }
 
 void MainWindow::show_warning(const QString &message)
