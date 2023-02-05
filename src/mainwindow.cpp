@@ -232,20 +232,12 @@ void MainWindow::on_actionRename_triggered()
 				                                        fileInfo.completeBaseName(),
 				                                        &ok);
 				if (ok && !newName.isEmpty()) {
-					if (fileInfo.isDir()) {
-						QDir dir(selectedItem);
-						if (dir.rename(dir.dirName(), newName)) {
-							qDebug() << "Folder renamed successfully";
-						} else {
-							qDebug() << "Error renaming folder";
-						}
+					QFile item(selectedItem);
+					QString itemType = fileInfo.isDir() ? "Folder" : "File";
+					if (item.rename(newName)) {
+						qDebug() << itemType << " renamed successfully";
 					} else {
-						QFile file(selectedItem);
-						if (file.rename(newName)) {
-							qDebug() << "File renamed successfully";
-						} else {
-							qDebug() << "Error renaming file";
-						}
+						qDebug() << "Error renaming " << itemType;
 					}
 				}
 			}
