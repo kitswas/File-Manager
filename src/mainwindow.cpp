@@ -203,3 +203,5 @@ void MainWindow::on_actionDelete_triggered()
 		}
 	}
 }
+
+void MainWindow::on_actionRename_triggered() {}

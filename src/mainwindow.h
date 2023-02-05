@@ -44,6 +44,8 @@ private slots:
 
 	void on_actionDelete_triggered();
 
+	void on_actionRename_triggered();
+
 private:
 	Ui::MainWindow *ui;
 	QList<QString> visitedPaths;
