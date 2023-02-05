@@ -24,17 +24,20 @@ Navpage::Navpage(QFileSystemModel *model, MainWindow *root, QWidget *parent)
 	view->setBatchSize(10);
 	dirView = static_cast<QAbstractItemView *>(view);
 	driveInfo = new DriveInfo(this);
+	itemInfo = nullptr;
 	set_up_dirview();
 	ui->verticalLayout->addWidget(dirView);
 	ui->verticalLayout->addWidget(driveInfo);
 
 	connect(dirView, &QAbstractItemView::doubleClicked, this, &Navpage::dirView_open_item);
+	connect(dirView, &QAbstractItemView::clicked, this, &Navpage::dirView_show_iteminfo);
 }
 
 Navpage::~Navpage()
 {
 	delete ui;
 	delete dirView;
+	delete itemInfo;
 	delete driveInfo;
 	delete current_dir;
 }
@@ -79,4 +82,17 @@ void Navpage::dirView_open_item(const QModelIndex &index)
 		qDebug() << "Should open the file here.";
 		//TODO open as a file
 	}
+}
+
+void Navpage::dirView_show_iteminfo(const QModelIndex &index)
+{
+	QFileInfo fileInfo = model->fileInfo(index);
+	if (itemInfo) {
+		ui->verticalLayout->removeWidget(itemInfo);
+		delete itemInfo;
+	}
+	itemInfo = new DirItemInfo(&fileInfo, this);
+	itemInfo->refresh();
+	ui->verticalLayout->addWidget(itemInfo);
+	qDebug() << index;
 }

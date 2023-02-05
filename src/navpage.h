@@ -1,6 +1,7 @@
 #ifndef NAVPAGE_H
 #define NAVPAGE_H
 
+#include "diriteminfo.h"
 #include "driveinfo.h"
 #include "mainwindow.h"
 
@@ -26,6 +27,7 @@ public:
 private:
 	Ui::Navpage *ui;
 	DriveInfo *driveInfo;
+	DirItemInfo *itemInfo;
 	MainWindow *root;
 	QDir *current_dir;
 	QAbstractItemView *dirView;
@@ -35,6 +37,7 @@ private:
 
 private slots:
 	void dirView_open_item(const QModelIndex &index);
+	void dirView_show_iteminfo(const QModelIndex &index);
 };
 
 #endif // NAVPAGE_H
