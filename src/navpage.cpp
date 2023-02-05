@@ -80,3 +80,14 @@ void Navpage::dirView_open_item(const QModelIndex &index)
 		//TODO open as a file
 	}
 }
+
+QStringList Navpage::get_selection()
+{
+	QModelIndexList list = dirView->selectionModel()->selectedIndexes();
+	QStringList path_list;
+	foreach (const QModelIndex &index, list) {
+		path_list.append(model->filePath(index));
+	}
+	qDebug() << path_list.join(",");
+	return path_list;
+}
