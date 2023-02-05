@@ -30,10 +30,8 @@ var NAVTREEINDEX0 =
 "diriteminfo_8cpp.html":[4,0,0,0],
 "diriteminfo_8cpp.html#a5376fec1833b74a36b8811720d51a10f":[4,0,0,0,0],
 "diriteminfo_8h.html":[4,0,0,1],
-"diriteminfo_8h_source.html":[4,0,0,1],
 "driveinfo_8cpp.html":[4,0,0,2],
 "driveinfo_8h.html":[4,0,0,3],
-"driveinfo_8h_source.html":[4,0,0,3],
 "files.html":[4,0],
 "functions.html":[3,3,0],
 "functions_enum.html":[3,3,2],
@@ -52,7 +50,6 @@ var NAVTREEINDEX0 =
 "main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97":[4,0,0,4,0],
 "mainwindow_8cpp.html":[4,0,0,5],
 "mainwindow_8h.html":[4,0,0,6],
-"mainwindow_8h_source.html":[4,0,0,6],
 "md_Setup_Guide.html":[1],
 "md_Setup_Guide.html#autotoc_md5":[1,0],
 "md_Setup_Guide.html#autotoc_md6":[1,1],
@@ -63,11 +60,9 @@ var NAVTREEINDEX0 =
 "namespaces.html":[2,0],
 "navpage_8cpp.html":[4,0,0,7],
 "navpage_8h.html":[4,0,0,8],
-"navpage_8h_source.html":[4,0,0,8],
 "pages.html":[],
 "utils_8cpp.html":[4,0,0,9],
 "utils_8cpp.html#a9af16beef915b55c271253de24d3d2c1":[4,0,0,9,0],
 "utils_8h.html":[4,0,0,10],
-"utils_8h.html#a9af16beef915b55c271253de24d3d2c1":[4,0,0,10,0],
-"utils_8h_source.html":[4,0,0,10]
+"utils_8h.html#a9af16beef915b55c271253de24d3d2c1":[4,0,0,10,0]
 };
