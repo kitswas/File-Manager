@@ -198,8 +198,20 @@ void MainWindow::on_actionDelete_triggered()
 		                           "Are you sure you want to delete the selected items?",
 		                           QMessageBox::Ok | QMessageBox::Cancel);
 		if (choice == QMessageBox::Ok) {
-			// Complete this
-			qDebug() << "Deleting items";
+			foreach (QString path, paths_to_delete) {
+				QFileInfo fileInfo(path);
+				if (fileInfo.isDir()) {
+					QDir dir(path);
+					if (!dir.removeRecursively()) {
+						qDebug() << "Failed to delete folder: " << path;
+					}
+				} else {
+					QFile file(path);
+					if (!file.remove()) {
+						qDebug() << "Failed to delete file: " << path;
+					}
+				}
+			}
 		}
 	}
 }
