@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['setting_20up_20your_20workspace_0',['Setting up your workspace',['../md_Setup_Guide.html',1,'']]],
-  ['setup_5fguide_2emd_1',['Setup_Guide.md',['../Setup__Guide_8md.html',1,'']]]
+  ['readme_2emd_0',['README.MD',['../README_8MD.html',1,'']]],
+  ['refresh_1',['refresh',['../classDirItemInfo.html#ae969b1ae8424e4159c9479aa1e7eb3a4',1,'DirItemInfo']]],
+  ['refreshdrive_2',['refreshDrive',['../classDriveInfo.html#adcb939a33cf8b511472121767859c77f',1,'DriveInfo']]]
 ];
