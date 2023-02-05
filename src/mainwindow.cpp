@@ -177,13 +177,29 @@ void MainWindow::on_actionNew_folder_triggered()
 	                                     &ok);
 
 	if (ok && !path.isEmpty()) {
-		// Complete this
 		QDir dir;
 		if (!dir.exists(path)) {
 			dir.mkdir(path);
 			qDebug() << "Directory created successfully";
 		} else {
 			qDebug() << "Directory already exists";
+		}
+	}
+}
+
+void MainWindow::on_actionDelete_triggered()
+{
+	Navpage *currentpage = static_cast<Navpage *>(ui->tabWidget->currentWidget());
+	if (currentpage) {
+		QStringList paths_to_delete = currentpage->get_selection();
+		QMessageBox::StandardButton choice
+			= QMessageBox::warning(this,
+		                           "Confirm delete",
+		                           "Are you sure you want to delete the selected items?",
+		                           QMessageBox::Ok | QMessageBox::Cancel);
+		if (choice == QMessageBox::Ok) {
+			// Complete this
+			qDebug() << "Deleting items";
 		}
 	}
 }
