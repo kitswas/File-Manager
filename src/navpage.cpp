@@ -12,6 +12,8 @@ Navpage::Navpage(QFileSystemModel *model, MainWindow *root, QWidget *parent)
 {
 	ui->setupUi(this);
 
+	current_dir = nullptr;
+
 	QListView *view = new QListView();
 	view->setWordWrap(true);
 	view->setViewMode(QListView::IconMode);
@@ -44,6 +46,9 @@ Navpage::~Navpage()
 
 int Navpage::change_dir(QString new_dir)
 {
+	if (current_dir) {
+		delete current_dir;
+	}
 	current_dir = new QDir(new_dir);
 	auto index = model->index(QDir::currentPath());
 	qDebug() << index;
