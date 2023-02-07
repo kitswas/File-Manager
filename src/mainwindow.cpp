@@ -250,6 +250,16 @@ void MainWindow::on_actionRename_triggered()
 	}
 }
 
+void MainWindow::on_actionCut_triggered()
+{
+	Navpage *currentpage = static_cast<Navpage *>(ui->tabWidget->currentWidget());
+	if (currentpage) {
+		itemsToCopy.clear();
+		itemsToMove = currentpage->get_selection();
+		qDebug() << "Cut successfully";
+	}
+}
+
 void MainWindow::on_actionCopy_triggered()
 {
 	Navpage *currentpage = static_cast<Navpage *>(ui->tabWidget->currentWidget());
@@ -265,15 +275,21 @@ void MainWindow::on_actionPaste_triggered()
 	Navpage *currentpage = static_cast<Navpage *>(ui->tabWidget->currentWidget());
 	if (currentpage) {
 		foreach (QString path, itemsToCopy) {
-			QFile item(path);
-			QString newName = item.fileName();
-			item.close();
-			qDebug() << "Copy result" << item.copy(QDir::current().absoluteFilePath(newName));
+			QFileInfo item(path);
+			QString newPath = QDir::current().absoluteFilePath(item.fileName());
+			qDebug() << "Name:" << item.fileName();
+			qDebug() << "path: " << path;
+			qDebug() << "new path:" << newPath;
+			qDebug() << "Copy result" << QFile::copy(path, newPath);
 		}
 		foreach (QString path, itemsToMove) {
-			QFile item(path);
-			qDebug() << "Copy result" << QFile::copy(path, QDir::currentPath() + item.fileName());
-			qDebug() << "Remove result" << item.remove();
+			QFileInfo item(path);
+			QString newPath = QDir::current().absoluteFilePath(item.fileName());
+			qDebug() << "Name:" << item.fileName();
+			qDebug() << "path: " << path;
+			qDebug() << "new path:" << newPath;
+			qDebug() << "Copy result" << QFile::copy(path, newPath);
+			qDebug() << "Remove result" << QFile::remove(path);
 		}
 
 		//		if (!item.isEmpty()) {
@@ -293,15 +309,6 @@ void MainWindow::on_actionPaste_triggered()
 		//				}
 		//			}
 		//		}
-	}
-}
-
-void MainWindow::on_actionCut_triggered()
-{
-	Navpage *currentpage = static_cast<Navpage *>(ui->tabWidget->currentWidget());
-	if (currentpage) {
-		itemsToCopy.clear();
-		itemsToMove = currentpage->get_selection();
 	}
 }
 
