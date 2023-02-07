@@ -244,3 +244,11 @@ void MainWindow::on_actionRename_triggered()
 		}
 	}
 }
+
+void MainWindow::on_actionClose_tab_triggered()
+{
+	Navpage *currentpage = static_cast<Navpage *>(ui->tabWidget->currentWidget());
+	int current_index = ui->tabWidget->currentIndex();
+	ui->tabWidget->removeTab(current_index);
+	delete currentpage;
+}
