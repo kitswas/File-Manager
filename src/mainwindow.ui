@@ -58,6 +58,9 @@
            <height>20</height>
           </size>
          </property>
+         <property name="shortcut">
+          <string>Alt+Left</string>
+         </property>
         </widget>
        </item>
        <item>
@@ -74,6 +77,9 @@
          <property name="icon">
           <iconset resource="../resources/Icon.qrc">
            <normaloff>:/buttons/up.svg</normaloff>:/buttons/up.svg</iconset>
+         </property>
+         <property name="shortcut">
+          <string>Alt+Up</string>
          </property>
         </widget>
        </item>
