@@ -58,6 +58,9 @@
            <height>20</height>
           </size>
          </property>
+         <property name="shortcut">
+          <string>Alt+Left</string>
+         </property>
         </widget>
        </item>
        <item>
@@ -74,6 +77,9 @@
          <property name="icon">
           <iconset resource="../resources/Icon.qrc">
            <normaloff>:/buttons/up.svg</normaloff>:/buttons/up.svg</iconset>
+         </property>
+         <property name="shortcut">
+          <string>Alt+Up</string>
          </property>
         </widget>
        </item>
@@ -146,7 +152,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>26</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -157,6 +163,7 @@
     <addaction name="actionNew_folder"/>
     <addaction name="separator"/>
     <addaction name="actionNew_tab"/>
+    <addaction name="actionClose_tab"/>
     <addaction name="separator"/>
     <addaction name="actionExit"/>
    </widget>
@@ -178,6 +185,9 @@
   <action name="actionNew_file">
    <property name="text">
     <string>New file</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
    </property>
   </action>
   <action name="actionNew_folder">
@@ -201,7 +211,7 @@
     <string>New tab</string>
    </property>
    <property name="shortcut">
-    <string>Ctrl+N</string>
+    <string>Ctrl+T</string>
    </property>
   </action>
   <action name="actionRename">
@@ -242,6 +252,14 @@
    </property>
    <property name="shortcut">
     <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="actionClose_tab">
+   <property name="text">
+    <string>Close tab</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+W</string>
    </property>
   </action>
  </widget>

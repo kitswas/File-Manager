@@ -52,6 +52,8 @@ private slots:
 
 	void on_actionCut_triggered();
 
+	void on_actionClose_tab_triggered();
+
 private:
 	Ui::MainWindow *ui;
 	QList<QString> visitedPaths;
