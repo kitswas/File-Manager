@@ -6,6 +6,9 @@ SearchWindow::SearchWindow(QWidget *parent) :
 	ui(new Ui::SearchWindow)
 {
 	ui->setupUi(this);
+
+	//Setup search buttons
+	ui->buttonBox->addButton("Search", QDialogButtonBox::ButtonRole::ApplyRole);
 }
 
 SearchWindow::~SearchWindow()
