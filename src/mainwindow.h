@@ -55,6 +55,8 @@ private slots:
 
 	void on_actionClose_tab_triggered();
 
+	void on_pushButton_clicked();
+
 private:
 	Ui::MainWindow *ui;
 	QList<QString> visitedPaths;
@@ -62,6 +64,7 @@ private:
 	QStringList itemsToCopy, itemsToMove;
 
 	bool check_n_change_dir(const QString &path, CDSource source, bool suppress_warning = false);
+	void new_searchwindow();
 	void locate_in_tree(const QString &path);
 	void show_warning(const QString &message);
 
