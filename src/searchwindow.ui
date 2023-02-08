@@ -38,9 +38,16 @@
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_2">
        <item>
+        <widget class="QCheckBox" name="checkBox_2">
+         <property name="text">
+          <string>Match Case</string>
+         </property>
+        </widget>
+       </item>
+       <item>
         <widget class="QCheckBox" name="checkBox">
          <property name="text">
-          <string>Parse wildcards ? *</string>
+          <string>Parse Wildcards ? *</string>
          </property>
         </widget>
        </item>
