@@ -1,12 +1,13 @@
 <map id="src/navpage.cpp" name="src/navpage.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="636,5,764,31"/>
+<area shape="rect" id="node1" title=" " alt="" coords="688,5,816,31"/>
 <area shape="rect" id="node2" href="$navpage_8h.html" title=" " alt="" coords="275,79,365,104"/>
 <area shape="rect" id="node13" title=" " alt="" coords="389,79,499,104"/>
 <area shape="rect" id="node14" title=" " alt="" coords="523,79,637,104"/>
 <area shape="rect" id="node15" title=" " alt="" coords="662,79,738,104"/>
 <area shape="rect" id="node16" title=" " alt="" coords="762,79,849,104"/>
-<area shape="rect" id="node17" title=" " alt="" coords="873,79,972,104"/>
-<area shape="rect" id="node18" title=" " alt="" coords="996,79,1087,104"/>
+<area shape="rect" id="node17" title=" " alt="" coords="873,79,956,104"/>
+<area shape="rect" id="node18" title=" " alt="" coords="980,79,1079,104"/>
+<area shape="rect" id="node19" title=" " alt="" coords="1103,79,1193,104"/>
 <area shape="rect" id="node3" href="$diriteminfo_8h.html" title=" " alt="" coords="125,152,232,177"/>
 <area shape="rect" id="node5" title=" " alt="" coords="139,225,218,251"/>
 <area shape="rect" id="node6" href="$driveinfo_8h.html" title=" " alt="" coords="9,152,101,177"/>
