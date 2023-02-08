@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>Search</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="../resources/Icon.qrc">
+    <normaloff>:/icons/search.svg</normaloff>:/icons/search.svg</iconset>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
@@ -61,6 +65,8 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="../resources/Icon.qrc"/>
+ </resources>
  <connections/>
 </ui>

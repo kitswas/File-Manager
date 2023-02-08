@@ -3,6 +3,7 @@
         <file>icon-folder.red.full.png</file>
         <file>icon-folder.redx128.png</file>
         <file>icon-folder.redx512.png</file>
+        <file>search.svg</file>
     </qresource>
     <qresource prefix="/buttons">
         <file>back.svg</file>
