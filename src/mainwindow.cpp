@@ -2,13 +2,20 @@
 #include "navpage.h"
 #include "ui_mainwindow.h"
 
+#include <QClipboard>
 #include <QDebug>
+#include <QDir>
+#include <QInputDialog>
 #include <QLineEdit>
 #include <QMessageBox>
+#include <QObject>
 #include <QTabWidget>
+#include <QTextEdit>
+#include <QWidget>
 
 MainWindow::MainWindow(QWidget *parent)
-	: QMainWindow(parent), ui(new Ui::MainWindow)
+	: QMainWindow(parent)
+	, ui(new Ui::MainWindow)
 {
 	ui->setupUi(this);
 
@@ -163,4 +170,178 @@ void MainWindow::on_upButton_clicked()
 	QDir dir = QDir::current();
 	if (dir.cdUp())
 		check_n_change_dir(dir.absolutePath(), CDSource::Navbutton);
+}
+
+void MainWindow::on_actionNew_folder_triggered()
+{
+	bool ok;
+	QString path = QInputDialog::getText(this,
+	                                     tr("Create a new folder"),
+	                                     tr("Enter path:"),
+	                                     QLineEdit::Normal,
+	                                     tr("New folder"),
+	                                     &ok);
+
+	if (ok && !path.isEmpty()) {
+		QDir dir;
+		if (!dir.exists(path)) {
+			dir.mkdir(path);
+			qDebug() << "Directory created successfully";
+		} else {
+			qDebug() << "Directory already exists";
+		}
+	}
+}
+
+void MainWindow::on_actionDelete_triggered()
+{
+	Navpage *currentpage = static_cast<Navpage *>(ui->tabWidget->currentWidget());
+	if (currentpage) {
+		QStringList paths_to_delete = currentpage->get_selection();
+		QMessageBox::StandardButton choice
+			= QMessageBox::warning(this,
+		                           "Confirm delete",
+		                           "Are you sure you want to delete the selected items?",
+		                           QMessageBox::Ok | QMessageBox::Cancel);
+		if (choice == QMessageBox::Ok) {
+			foreach (QString path, paths_to_delete) {
+				QFileInfo fileInfo(path);
+				if (fileInfo.isDir()) {
+					QDir dir(path);
+					if (!dir.removeRecursively()) {
+						qDebug() << "Failed to delete folder: " << path;
+					}
+				} else {
+					QFile file(path);
+					if (!file.remove()) {
+						qDebug() << "Failed to delete file: " << path;
+					}
+				}
+			}
+		}
+	}
+}
+
+void MainWindow::on_actionRename_triggered()
+{
+	Navpage *currentpage = static_cast<Navpage *>(ui->tabWidget->currentWidget());
+	if (currentpage) {
+		QStringList selectedItems = currentpage->get_selection();
+		foreach (QString selectedItem, selectedItems) {
+			if (!selectedItem.isEmpty()) {
+				bool ok;
+				QFileInfo fileInfo(selectedItem);
+				QString newName = QInputDialog::getText(this,
+				                                        tr("Rename"),
+				                                        tr("New name:"),
+				                                        QLineEdit::Normal,
+				                                        fileInfo.completeBaseName(),
+				                                        &ok);
+				if (ok && !newName.isEmpty()) {
+					QFile item(selectedItem);
+					QString itemType = fileInfo.isDir() ? "Folder" : "File";
+					if (item.rename(newName)) {
+						qDebug() << itemType << " renamed successfully";
+					} else {
+						qDebug() << "Error renaming " << itemType;
+					}
+				}
+			}
+		}
+	}
+}
+
+void MainWindow::on_actionCut_triggered()
+{
+	Navpage *currentpage = static_cast<Navpage *>(ui->tabWidget->currentWidget());
+	if (currentpage) {
+		itemsToCopy.clear();
+		itemsToMove = currentpage->get_selection();
+		qDebug() << "Cut successfully";
+	}
+}
+
+void MainWindow::on_actionCopy_triggered()
+{
+	Navpage *currentpage = static_cast<Navpage *>(ui->tabWidget->currentWidget());
+	if (currentpage) {
+		itemsToMove.clear();
+		itemsToCopy = currentpage->get_selection();
+		qDebug() << "Copied successfully";
+	}
+}
+
+void MainWindow::on_actionPaste_triggered()
+{
+	Navpage *currentpage = static_cast<Navpage *>(ui->tabWidget->currentWidget());
+	if (currentpage) {
+		foreach (QString path, itemsToCopy) {
+			QFileInfo item(path);
+			QString newPath = QDir::current().absoluteFilePath(item.fileName());
+			qDebug() << "Name:" << item.fileName();
+			qDebug() << "path: " << path;
+			qDebug() << "new path:" << newPath;
+			qDebug() << "Copy result" << QFile::copy(path, newPath);
+		}
+		foreach (QString path, itemsToMove) {
+			QFileInfo item(path);
+			QString newPath = QDir::current().absoluteFilePath(item.fileName());
+			qDebug() << "Name:" << item.fileName();
+			qDebug() << "path: " << path;
+			qDebug() << "new path:" << newPath;
+			qDebug() << "Copy result" << QFile::copy(path, newPath);
+			qDebug() << "Remove result" << QFile::remove(path);
+		}
+
+		//		if (!item.isEmpty()) {
+		//			QFileInfo fileInfo(item);
+		//			QString newName = QInputDialog::getText(this,
+		//			                                        tr("Paste"),
+		//			                                        tr("New name:"),
+		//			                                        QLineEdit::Normal,
+		//			                                        fileInfo.completeBaseName());
+		//			if (!newName.isEmpty()) {
+		//				QFile item(clipboard->text());
+		//				QString itemType = fileInfo.isDir() ? "Folder" : "File";
+		//				if (item.rename(newName)) {
+		//					qDebug() << itemType << " pasted successfully";
+		//				} else {
+		//					qDebug() << "Error pasting " << itemType;
+		//				}
+		//			}
+		//		}
+	}
+}
+
+//void MainWindow::on_actionSearch_triggered()
+//{
+//	Navpage *currentpage = static_cast<Navpage *>(ui->tabWidget->currentWidget());
+//	if (currentpage) {
+//		bool ok;
+//		QString searchTerm = QInputDialog::getText(this,
+//		                                           tr("Search"),
+//		                                           tr("Enter the search term:"),
+//		                                           QLineEdit::Normal,
+//		                                           "",
+//		                                           &ok);
+//		if (ok && !searchTerm.isEmpty()) {
+//			QStringList searchResults = currentpage->search(searchTerm);
+//			if (!searchResults.isEmpty()) {
+//				qDebug() << "Search results:";
+//				foreach (QString result, searchResults) {
+//					qDebug() << result;
+//				}
+//			} else {
+//				qDebug() << "No search results found";
+//			}
+//		}
+//	}
+//}
+
+void MainWindow::on_actionClose_tab_triggered()
+{
+	Navpage *currentpage = static_cast<Navpage *>(ui->tabWidget->currentWidget());
+	int current_index = ui->tabWidget->currentIndex();
+	ui->tabWidget->removeTab(current_index);
+	delete currentpage;
 }

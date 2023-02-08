@@ -23,6 +23,7 @@ public:
 	~Navpage();
 	int change_dir(QString new_dir);
 	inline QString get_current_dir() const { return current_dir->absolutePath(); }
+	QStringList get_selection();
 
 private:
 	Ui::Navpage *ui;

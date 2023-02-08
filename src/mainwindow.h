@@ -41,10 +41,25 @@ private slots:
 
 	void on_upButton_clicked();
 
+	void on_actionNew_folder_triggered();
+
+	void on_actionDelete_triggered();
+
+	void on_actionRename_triggered();
+
+	void on_actionCopy_triggered();
+
+	void on_actionPaste_triggered();
+
+	void on_actionCut_triggered();
+
+	void on_actionClose_tab_triggered();
+
 private:
 	Ui::MainWindow *ui;
 	QList<QString> visitedPaths;
 	QFileSystemModel *FSmodel = new QFileSystemModel();
+	QStringList itemsToCopy, itemsToMove;
 
 	bool check_n_change_dir(const QString &path, CDSource source, bool suppress_warning = false);
 	void locate_in_tree(const QString &path);

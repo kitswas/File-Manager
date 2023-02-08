@@ -4,6 +4,7 @@
 #include <QColumnView>
 #include <QLayout>
 #include <QListView>
+#include <QProcess>
 #include <QTableView>
 #include <QTreeView>
 
@@ -85,8 +86,38 @@ void Navpage::dirView_open_item(const QModelIndex &index)
 		change_dir(model->filePath(index));
 	else {
 		qDebug() << "Should open the file here.";
-		//TODO open as a file
+		QProcess launcher;
+		QString program;
+		QStringList arguments;
+
+#if defined(Q_OS_LINUX)
+		program = "xdg-open";
+		arguments << model->filePath(index);
+#elif defined(Q_OS_WIN)
+		program = "cmd.exe";
+		arguments << "/C"
+				  << "start"
+				  << "" << model->filePath(index);
+#elif defined(Q_OS_MACOS)
+		program = "open";
+		arguments << model->filePath(index);
+#endif
+
+		launcher.setProgram(program);
+		launcher.setArguments(arguments);
+		qDebug() << "Process started" << launcher.startDetached();
 	}
+}
+
+QStringList Navpage::get_selection()
+{
+	QModelIndexList list = dirView->selectionModel()->selectedIndexes();
+	QStringList path_list;
+	foreach (const QModelIndex &index, list) {
+		path_list.append(model->filePath(index));
+	}
+	qDebug() << path_list.join(",");
+	return path_list;
 }
 
 void Navpage::dirView_show_iteminfo(const QModelIndex &index)
