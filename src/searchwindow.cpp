@@ -40,8 +40,10 @@ void SearchWindow::search()
 
 	while (diritems.hasNext()) {
 		const QFileInfo fileInfo = diritems.nextFileInfo();
-		if (!fileInfo.isHidden()) //filters dot and dotdot
-		{
+		if (fileInfo.fileName().compare(".") == 0
+		    || fileInfo.fileName().compare("..") == 0) //filters dot and dotdot
+			continue;
+		if (!fileInfo.isHidden()) {
 			if (fileInfo.fileName().contains(key, caseSensitivity)) {
 				results.append(fileInfo);
 				qDebug() << fileInfo;
