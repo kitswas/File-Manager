@@ -11,10 +11,13 @@ SearchWindow::SearchWindow(QWidget *parent) :
 	ui->setupUi(this);
 
 	//Setup search buttons
-	QPushButton *searchButton = new QPushButton("Search", ui->buttonBox);
-	ui->buttonBox->addButton(searchButton, QDialogButtonBox::ButtonRole::ApplyRole);
+	//	QPushButton *searchButton = new QPushButton("Search", ui->buttonBox);
+	//	searchButton->setAutoDefault(true);
+	//	ui->buttonBox->addButton(searchButton, QDialogButtonBox::ButtonRole::ApplyRole);
 
-	connect(searchButton, &QPushButton::clicked, this, &SearchWindow::search);
+	ui->search_path->setText(QDir::currentPath());
+
+	connect(ui->searchButton, &QPushButton::clicked, this, &SearchWindow::search);
 }
 
 SearchWindow::~SearchWindow()
@@ -24,14 +27,19 @@ SearchWindow::~SearchWindow()
 
 void SearchWindow::search()
 {
-	QString key = ui->lineEdit->text();
+	QString key = ui->search_key->text();
+	QString searchpath = ui->search_path->text();
 	Qt::CaseSensitivity caseSensitivity = ui->caseSensitive->isChecked() ? Qt::CaseSensitive
 	                                                                     : Qt::CaseInsensitive;
 	results.clear();
-	QDirIterator subdirs(QDir::current(), QDirIterator::Subdirectories);
 
-	while (subdirs.hasNext()) {
-		const QFileInfo fileInfo = subdirs.nextFileInfo();
+	QString oldTitle = this->windowTitle();
+	this->setWindowTitle("Searching...please wait"); //Inform the user
+
+	QDirIterator diritems(searchpath, QDirIterator::Subdirectories);
+
+	while (diritems.hasNext()) {
+		const QFileInfo fileInfo = diritems.nextFileInfo();
 		if (!fileInfo.isHidden()) //filters dot and dotdot
 		{
 			if (fileInfo.fileName().contains(key, caseSensitivity)) {
@@ -43,4 +51,6 @@ void SearchWindow::search()
 			}
 		}
 	}
+
+	this->setWindowTitle(oldTitle);
 }

@@ -23,12 +23,43 @@
      <widget class="QWidget" name="group" native="true">
       <layout class="QHBoxLayout" name="horizontalLayout_3">
        <item>
-        <widget class="QLineEdit" name="lineEdit"/>
+        <widget class="QLabel" name="label_search_for">
+         <property name="text">
+          <string>Search for:</string>
+         </property>
+        </widget>
        </item>
        <item>
-        <widget class="QDialogButtonBox" name="buttonBox">
-         <property name="standardButtons">
-          <set>QDialogButtonBox::NoButton</set>
+        <widget class="QLineEdit" name="search_key">
+         <property name="placeholderText">
+          <string>Text to search</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_in">
+         <property name="text">
+          <string>in:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="search_path">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="placeholderText">
+          <string>Path to search</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="searchButton">
+         <property name="text">
+          <string>Search</string>
+         </property>
+         <property name="default">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
