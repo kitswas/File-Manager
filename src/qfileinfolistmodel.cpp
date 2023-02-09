@@ -55,11 +55,6 @@ QVariant QFileInfoListModel::data(const QModelIndex &index, int role) const
 	return QVariant();
 }
 
-/*!
-    Sets the model's internal string list to \a strings. The model will
-    notify any attached views that its underlying data has changed.
-    \sa dataChanged()
-*/
 void QFileInfoListModel::setQFileInfoList(const QList<QFileInfo> &fileInfos)
 {
 	beginResetModel();
