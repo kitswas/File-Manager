@@ -12,12 +12,12 @@ QFileInfoListModel::~QFileInfoListModel() {}
 
 QVariant QFileInfoListModel::headerData(int section, Qt::Orientation orientation, int role) const
 {
-	Q_UNUSED(orientation)
-
-	if ((role == Qt::DisplayRole) | (role == Qt::EditRole))
+	if (orientation == Qt::Horizontal && role == Qt::DisplayRole && section >= 0
+	    && section < header.size()) {
+		qDebug() << "header data " << header.at(section) << " fetched for section " << section;
 		return header.at(section);
-	else
-		return "";
+	}
+	return QVariant();
 }
 
 int QFileInfoListModel::columnCount(const QModelIndex &parent) const
