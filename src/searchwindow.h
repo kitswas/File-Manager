@@ -1,6 +1,7 @@
 #ifndef SEARCHWINDOW_H
 #define SEARCHWINDOW_H
 
+#include <QFileInfo>
 #include <QMainWindow>
 
 namespace Ui {
@@ -17,6 +18,9 @@ public:
 
 private:
 	Ui::SearchWindow *ui;
+	QList<QFileInfo> results;
+
+	void search();
 };
 
 #endif // SEARCHWINDOW_H
