@@ -90,7 +90,14 @@
      </widget>
     </item>
     <item>
-     <widget class="QTableView" name="resultView"/>
+     <widget class="QTableView" name="resultView">
+      <property name="showGrid">
+       <bool>false</bool>
+      </property>
+      <attribute name="horizontalHeaderStretchLastSection">
+       <bool>true</bool>
+      </attribute>
+     </widget>
     </item>
    </layout>
   </widget>
