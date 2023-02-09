@@ -3,11 +3,12 @@
 #include "ui_searchwindow.h"
 
 #include <QDirIterator>
+#include <QHeaderView>
 #include <QPushButton>
 
-SearchWindow::SearchWindow(QWidget *parent) :
-	QMainWindow(parent),
-	ui(new Ui::SearchWindow)
+SearchWindow::SearchWindow(QWidget *parent)
+	: QMainWindow(parent)
+	, ui(new Ui::SearchWindow)
 {
 	ui->setupUi(this);
 
@@ -18,7 +19,16 @@ SearchWindow::SearchWindow(QWidget *parent) :
 
 	ui->search_path->setText(QDir::currentPath());
 
-	ui->resultView->setModel(new QFileInfoListModel());
+	model = new QFileInfoListModel();
+	ui->resultView->setModel(model);
+	//	QHeaderView *header = new QHeaderView(Qt::Horizontal, ui->resultView);
+	//	header->setModel(static_cast<QFileInfoListModel *>(ui->resultView->model()));
+	//	QHeaderView *header = ui->resultView->horizontalHeader();
+	//	header->setVisible(true);
+	//	header->update();
+	//	qDebug() << "header" << header->count();
+	//	header->dumpObjectInfo();
+	//	ui->resultView->setHorizontalHeader(header);
 
 	connect(ui->searchButton, &QPushButton::clicked, this, &SearchWindow::search);
 }
@@ -26,6 +36,7 @@ SearchWindow::SearchWindow(QWidget *parent) :
 SearchWindow::~SearchWindow()
 {
 	delete ui;
+	delete model;
 }
 
 void SearchWindow::search()

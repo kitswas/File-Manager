@@ -1,6 +1,8 @@
 #ifndef SEARCHWINDOW_H
 #define SEARCHWINDOW_H
 
+#include "qfileinfolistmodel.h"
+
 #include <QFileInfo>
 #include <QMainWindow>
 
@@ -18,6 +20,7 @@ public:
 
 private:
 	Ui::SearchWindow *ui;
+	QFileInfoListModel *model;
 	QList<QFileInfo> results;
 
 	void search();
