@@ -1,4 +1,5 @@
 #include "searchwindow.h"
+#include "qfileinfolistmodel.h"
 #include "ui_searchwindow.h"
 
 #include <QDirIterator>
@@ -16,6 +17,8 @@ SearchWindow::SearchWindow(QWidget *parent) :
 	//	ui->buttonBox->addButton(searchButton, QDialogButtonBox::ButtonRole::ApplyRole);
 
 	ui->search_path->setText(QDir::currentPath());
+
+	ui->resultView->setModel(new QFileInfoListModel());
 
 	connect(ui->searchButton, &QPushButton::clicked, this, &SearchWindow::search);
 }
@@ -47,12 +50,18 @@ void SearchWindow::search()
 			if (fileInfo.fileName().contains(key, caseSensitivity)) {
 				results.append(fileInfo);
 				qDebug() << fileInfo;
-				ui->listWidget->addItem("Name: " + fileInfo.fileName()
-				                        + "\tPath:" + fileInfo.absolutePath());
-				//				ui->listWidget->addItem(fileInfo);
+				//				QListWidgetItem *entry = new QListWidgetItem();
+				//				qDebug() << "QVariant" << QVariant::fromValue(fileInfo);
+				//				entry->setData(Qt::DisplayRole, QVariant::fromValue(fileInfo));
+				//				ui->listWidget->addItem("Name: " + fileInfo.fileName()
+				//				                        + "\tPath:" + fileInfo.absolutePath());
+				//				ui->listWidget->addItem(entry);
 			}
 		}
 	}
+
+	static_cast<QFileInfoListModel *>(ui->resultView->model())->setQFileInfoList(results);
+	ui->resultView->resizeColumnsToContents();
 
 	this->setWindowTitle(oldTitle);
 }

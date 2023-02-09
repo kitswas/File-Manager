@@ -90,7 +90,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QListWidget" name="listWidget"/>
+     <widget class="QTableView" name="resultView"/>
     </item>
    </layout>
   </widget>

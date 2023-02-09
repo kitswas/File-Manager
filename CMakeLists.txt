@@ -40,6 +40,8 @@ set(PROJECT_SOURCES
         src/searchwindow.h
         src/searchwindow.cpp
         src/searchwindow.ui
+        src/qfileinfolistmodel.h
+        src/qfileinfolistmodel.cpp
         resources/Icon.qrc
 )
 
