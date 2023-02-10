@@ -81,6 +81,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="checkBox">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>Parse Wildcards ? *</string>
          </property>

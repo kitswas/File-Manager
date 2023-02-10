@@ -12,23 +12,10 @@ SearchWindow::SearchWindow(QWidget *parent)
 {
 	ui->setupUi(this);
 
-	//Setup search buttons
-	//	QPushButton *searchButton = new QPushButton("Search", ui->buttonBox);
-	//	searchButton->setAutoDefault(true);
-	//	ui->buttonBox->addButton(searchButton, QDialogButtonBox::ButtonRole::ApplyRole);
-
 	ui->search_path->setText(QDir::currentPath());
 
 	model = new QFileInfoListModel();
 	ui->resultView->setModel(model);
-	//	QHeaderView *header = new QHeaderView(Qt::Horizontal, ui->resultView);
-	//	header->setModel(static_cast<QFileInfoListModel *>(ui->resultView->model()));
-	//	QHeaderView *header = ui->resultView->horizontalHeader();
-	//	header->setVisible(true);
-	//	header->update();
-	//	qDebug() << "header" << header->count();
-	//	header->dumpObjectInfo();
-	//	ui->resultView->setHorizontalHeader(header);
 
 	connect(ui->searchButton, &QPushButton::clicked, this, &SearchWindow::search);
 }
@@ -61,12 +48,6 @@ void SearchWindow::search()
 			if (fileInfo.fileName().contains(key, caseSensitivity)) {
 				results.append(fileInfo);
 				qDebug() << fileInfo;
-				//				QListWidgetItem *entry = new QListWidgetItem();
-				//				qDebug() << "QVariant" << QVariant::fromValue(fileInfo);
-				//				entry->setData(Qt::DisplayRole, QVariant::fromValue(fileInfo));
-				//				ui->listWidget->addItem("Name: " + fileInfo.fileName()
-				//				                        + "\tPath:" + fileInfo.absolutePath());
-				//				ui->listWidget->addItem(entry);
 			}
 		}
 	}
