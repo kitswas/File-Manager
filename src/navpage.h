@@ -7,8 +7,6 @@
 
 #include <QAbstractItemView>
 #include <QDir>
-#include <QFileSystemModel>
-#include <QWidget>
 
 namespace Ui {
 class Navpage;

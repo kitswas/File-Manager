@@ -1,5 +1,4 @@
 #include "searchwindow.h"
-#include "qfileinfolistmodel.h"
 #include "ui_searchwindow.h"
 
 #include <QDirIterator>

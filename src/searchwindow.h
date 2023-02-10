@@ -3,7 +3,6 @@
 
 #include "qfileinfolistmodel.h"
 
-#include <QFileInfo>
 #include <QMainWindow>
 
 namespace Ui {

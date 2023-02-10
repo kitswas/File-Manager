@@ -6,14 +6,12 @@
 
 #include <QClipboard>
 #include <QDebug>
-#include <QDir>
 #include <QInputDialog>
 #include <QLineEdit>
 #include <QMessageBox>
 #include <QObject>
 #include <QTabWidget>
 #include <QTextEdit>
-#include <QWidget>
 
 MainWindow::MainWindow(QWidget *parent)
 	: QMainWindow(parent)
