@@ -57,7 +57,7 @@ private slots:
 
 	void on_actionClose_tab_triggered();
 
-	void on_pushButton_clicked();
+	void on_searchButton_clicked();
 
 private:
 	Ui::MainWindow *ui;

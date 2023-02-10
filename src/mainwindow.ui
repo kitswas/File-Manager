@@ -97,7 +97,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton">
+        <widget class="QPushButton" name="searchButton">
          <property name="text">
           <string>Search</string>
          </property>

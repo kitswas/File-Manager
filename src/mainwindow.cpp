@@ -385,7 +385,7 @@ void MainWindow::on_actionClose_tab_triggered()
 	delete currentpage;
 }
 
-void MainWindow::on_pushButton_clicked()
+void MainWindow::on_searchButton_clicked()
 {
 	new_searchwindow();
 }
