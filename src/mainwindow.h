@@ -41,6 +41,8 @@ private slots:
 
 	void on_upButton_clicked();
 
+	void on_actionNew_file_triggered();
+
 	void on_actionNew_folder_triggered();
 
 	void on_actionDelete_triggered();

@@ -183,6 +183,26 @@ void MainWindow::on_upButton_clicked()
 		check_n_change_dir(dir.absolutePath(), CDSource::Navbutton);
 }
 
+void MainWindow::on_actionNew_file_triggered()
+{
+	bool ok;
+	QString filename = QInputDialog::getText(this,
+	                                         tr("Create a new file"),
+	                                         tr("Enter filename:"),
+	                                         QLineEdit::Normal,
+	                                         tr("New file"),
+	                                         &ok);
+	if (ok && !filename.isEmpty()) {
+		QFile file(filename);
+		if (file.open(QIODeviceBase::NewOnly)) {
+			qDebug() << "File created successfully";
+			file.close();
+		} else {
+			qDebug() << "Unable to create file";
+		}
+	}
+}
+
 void MainWindow::on_actionNew_folder_triggered()
 {
 	bool ok;
