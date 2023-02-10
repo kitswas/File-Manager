@@ -106,7 +106,7 @@ Include dependency graph for utils.h:</div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="utils_8h__dep__incl.svg" width="435" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="utils_8h__dep__incl.svg" width="614" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><table class="memberdecls">
@@ -115,8 +115,63 @@ Functions</h2></td></tr>
 <tr class="memitem:a9af16beef915b55c271253de24d3d2c1"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#a9af16beef915b55c271253de24d3d2c1">format_bytes</a> (qint64 bytes)</td></tr>
 <tr class="memdesc:a9af16beef915b55c271253de24d3d2c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format the provided number as bytes.  <a href="utils_8h.html#a9af16beef915b55c271253de24d3d2c1">More...</a><br /></td></tr>
 <tr class="separator:a9af16beef915b55c271253de24d3d2c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6888f2979e2c427c4148c6738ea39a44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#a6888f2979e2c427c4148c6738ea39a44">copyOrMoveDirectorySubtree</a> (const QString &amp;from, const QString &amp;to, bool copyAndRemove, bool overwriteExistingFiles)</td></tr>
+<tr class="memdesc:a6888f2979e2c427c4148c6738ea39a44"><td class="mdescLeft">&#160;</td><td class="mdescRight">copyOrMoveDirectorySubtree  <a href="utils_8h.html#a6888f2979e2c427c4148c6738ea39a44">More...</a><br /></td></tr>
+<tr class="separator:a6888f2979e2c427c4148c6738ea39a44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a6888f2979e2c427c4148c6738ea39a44" name="a6888f2979e2c427c4148c6738ea39a44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6888f2979e2c427c4148c6738ea39a44">&#9670;&#160;</a></span>copyOrMoveDirectorySubtree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void copyOrMoveDirectorySubtree </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>to</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>copyAndRemove</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>overwriteExistingFiles</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>copyOrMoveDirectorySubtree </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">from</td><td></td></tr>
+    <tr><td class="paramname">to</td><td></td></tr>
+    <tr><td class="paramname">copyAndRemove</td><td>If <code>true</code>, move instead of copy. </td></tr>
+    <tr><td class="paramname">overWriteExistingFiles</td><td>If <code>true</code>, overwrite existing files at the destination. <b>Destructive.</b></td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Copies a folder and all its contents. Reference: <a href="https://forum.qt.io/topic/105993/copy-folder-qt-c/5?_=1675790958476&lang=en-GB">https://forum.qt.io/topic/105993/copy-folder-qt-c/5?_=1675790958476&amp;lang=en-GB</a> </p>
+
+</div>
+</div>
 <a id="a9af16beef915b55c271253de24d3d2c1" name="a9af16beef915b55c271253de24d3d2c1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9af16beef915b55c271253de24d3d2c1">&#9670;&#160;</a></span>format_bytes()</h2>
 

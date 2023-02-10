@@ -78,7 +78,9 @@ var NAVTREEINDEX0 =
 "searchwindow_8cpp.html":[4,0,0,11],
 "searchwindow_8h.html":[4,0,0,12],
 "utils_8cpp.html":[4,0,0,13],
-"utils_8cpp.html#a9af16beef915b55c271253de24d3d2c1":[4,0,0,13,0],
+"utils_8cpp.html#a6888f2979e2c427c4148c6738ea39a44":[4,0,0,13,0],
+"utils_8cpp.html#a9af16beef915b55c271253de24d3d2c1":[4,0,0,13,1],
 "utils_8h.html":[4,0,0,14],
-"utils_8h.html#a9af16beef915b55c271253de24d3d2c1":[4,0,0,14,0]
+"utils_8h.html#a6888f2979e2c427c4148c6738ea39a44":[4,0,0,14,0],
+"utils_8h.html#a9af16beef915b55c271253de24d3d2c1":[4,0,0,14,1]
 };
