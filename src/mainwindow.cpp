@@ -329,51 +329,8 @@ void MainWindow::on_actionPaste_triggered()
 				copyOrMoveDirectorySubtree(path, QDir::currentPath(), true, false);
 			}
 		}
-
-		//		if (!item.isEmpty()) {
-		//			QFileInfo fileInfo(item);
-		//			QString newName = QInputDialog::getText(this,
-		//			                                        tr("Paste"),
-		//			                                        tr("New name:"),
-		//			                                        QLineEdit::Normal,
-		//			                                        fileInfo.completeBaseName());
-		//			if (!newName.isEmpty()) {
-		//				QFile item(clipboard->text());
-		//				QString itemType = fileInfo.isDir() ? "Folder" : "File";
-		//				if (item.rename(newName)) {
-		//					qDebug() << itemType << " pasted successfully";
-		//				} else {
-		//					qDebug() << "Error pasting " << itemType;
-		//				}
-		//			}
-		//		}
 	}
 }
-
-//void MainWindow::on_actionSearch_triggered()
-//{
-//	Navpage *currentpage = static_cast<Navpage *>(ui->tabWidget->currentWidget());
-//	if (currentpage) {
-//		bool ok;
-//		QString searchTerm = QInputDialog::getText(this,
-//		                                           tr("Search"),
-//		                                           tr("Enter the search term:"),
-//		                                           QLineEdit::Normal,
-//		                                           "",
-//		                                           &ok);
-//		if (ok && !searchTerm.isEmpty()) {
-//			QStringList searchResults = currentpage->search(searchTerm);
-//			if (!searchResults.isEmpty()) {
-//				qDebug() << "Search results:";
-//				foreach (QString result, searchResults) {
-//					qDebug() << result;
-//				}
-//			} else {
-//				qDebug() << "No search results found";
-//			}
-//		}
-//	}
-//}
 
 void MainWindow::on_actionClose_tab_triggered()
 {
