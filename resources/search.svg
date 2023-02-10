@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="48"
+   height="48"
+   viewBox="0 0 48 48"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="search.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="10"
+     inkscape:cx="38.8"
+     inkscape:cy="29.05"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient1085">
+      <stop
+         style="stop-color:#00ffff;stop-opacity:1;"
+         offset="0"
+         id="stop1081" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="1"
+         id="stop1083" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1085"
+       id="radialGradient1087"
+       cx="32.400002"
+       cy="15.7"
+       fx="32.400002"
+       fy="15.7"
+       r="15.6"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <ellipse
+       style="fill:#cc0000;stroke:#330000;stroke-width:4;stroke-linejoin:round;stroke-miterlimit:11.4;paint-order:markers stroke fill;stroke-opacity:1;fill-opacity:1"
+       id="path500"
+       cx="33.976479"
+       cy="13.399673"
+       rx="1.75"
+       ry="17.5"
+       transform="rotate(45)"
+       inkscape:label="handle" />
+    <circle
+       style="fill:url(#radialGradient1087);stroke:#330000;stroke-width:4;stroke-linejoin:round;stroke-miterlimit:11.4;paint-order:markers stroke fill;stroke-opacity:1;fill-opacity:1"
+       id="path444"
+       cx="32.400002"
+       cy="15.7"
+       r="13.6"
+       inkscape:label="lens" />
+  </g>
+</svg>

@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "navpage.h"
+#include "searchwindow.h"
 #include "ui_mainwindow.h"
 
 #include <QClipboard>
@@ -63,6 +64,15 @@ int MainWindow::add_page_to_tabpanel(QString dir, const QString &label)
 	ui->tabWidget->addTab(newpage, label);
 	visitedPaths.push_back(dir);
 	return 0;
+}
+
+void MainWindow::new_searchwindow()
+{
+	SearchWindow *finder = new SearchWindow();
+	qDebug() << "Search window created";
+	finder->show();
+	finder->raise();
+	finder->activateWindow();
 }
 
 bool MainWindow::check_n_change_dir(const QString &path, CDSource source, bool suppress_warning)
@@ -344,4 +354,9 @@ void MainWindow::on_actionClose_tab_triggered()
 	int current_index = ui->tabWidget->currentIndex();
 	ui->tabWidget->removeTab(current_index);
 	delete currentpage;
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+	new_searchwindow();
 }

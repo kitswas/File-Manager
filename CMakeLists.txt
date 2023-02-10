@@ -37,6 +37,11 @@ set(PROJECT_SOURCES
         src/diriteminfo.ui
         src/utils.h
         src/utils.cpp
+        src/searchwindow.h
+        src/searchwindow.cpp
+        src/searchwindow.ui
+        src/qfileinfolistmodel.h
+        src/qfileinfolistmodel.cpp
         resources/Icon.qrc
 )
 

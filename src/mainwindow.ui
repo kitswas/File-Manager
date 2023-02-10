@@ -97,12 +97,12 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="searchBar">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-           <horstretch>1</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
+        <widget class="QPushButton" name="pushButton">
+         <property name="text">
+          <string>Search</string>
+         </property>
+         <property name="shortcut">
+          <string>Ctrl+F</string>
          </property>
         </widget>
        </item>
