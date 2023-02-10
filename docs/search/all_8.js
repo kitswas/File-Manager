@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['readme_2emd_0',['README.MD',['../README_8MD.html',1,'']]],
-  ['refresh_1',['refresh',['../classDirItemInfo.html#ae969b1ae8424e4159c9479aa1e7eb3a4',1,'DirItemInfo']]],
-  ['refreshdrive_2',['refreshDrive',['../classDriveInfo.html#adcb939a33cf8b511472121767859c77f',1,'DriveInfo']]]
+  ['qfileinfolistmodel_0',['QFileInfoListModel',['../classQFileInfoListModel.html',1,'QFileInfoListModel'],['../classQFileInfoListModel.html#aa75ccd47d830fc93e131651d3ac66ffe',1,'QFileInfoListModel::QFileInfoListModel()']]],
+  ['qfileinfolistmodel_2ecpp_1',['qfileinfolistmodel.cpp',['../qfileinfolistmodel_8cpp.html',1,'']]],
+  ['qfileinfolistmodel_2eh_2',['qfileinfolistmodel.h',['../qfileinfolistmodel_8h.html',1,'']]],
+  ['qt_5fntfs_5fpermission_5flookup_3',['qt_ntfs_permission_lookup',['../diriteminfo_8cpp.html#afeb86fc87af7051b8140f2e40977e352',1,'diriteminfo.cpp']]]
 ];
