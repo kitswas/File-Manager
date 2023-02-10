@@ -27,7 +27,7 @@ var NAVTREE =
   [ "File Manager", "index.html", [
     [ "File-Manager", "index.html", [
       [ "Introduction", "index.html#autotoc_md1", null ],
-      [ "Setup", "index.html#autotoc_md2", null ],
+      [ "Setting up your development environment", "index.html#autotoc_md2", null ],
       [ "Generating Documentation", "index.html#autotoc_md3", null ]
     ] ],
     [ "Setting up your workspace", "md_Setup_Guide.html", [
