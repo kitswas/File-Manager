@@ -13,4 +13,19 @@
  */
 QString format_bytes(qint64 bytes);
 
+/*!
+ * \brief copyOrMoveDirectorySubtree
+ * \param from
+ * \param to
+ * \param copyAndRemove If `true`, move instead of copy.
+ * \param overWriteExistingFiles If `true`, overwrite existing files at the destination. **Destructive.**
+ * 
+ * Copies a folder and all its contents. 
+ * Reference: https://forum.qt.io/topic/105993/copy-folder-qt-c/5?_=1675790958476&lang=en-GB
+ */
+void copyOrMoveDirectorySubtree(const QString &from,
+                                const QString &to,
+                                bool copyAndRemove,
+                                bool overwriteExistingFiles);
+
 #endif // UTILS_H

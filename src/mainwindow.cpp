@@ -2,6 +2,7 @@
 #include "navpage.h"
 #include "searchwindow.h"
 #include "ui_mainwindow.h"
+#include "utils.h"
 
 #include <QClipboard>
 #include <QDebug>
@@ -287,20 +288,28 @@ void MainWindow::on_actionPaste_triggered()
 	if (currentpage) {
 		foreach (QString path, itemsToCopy) {
 			QFileInfo item(path);
-			QString newPath = QDir::current().absoluteFilePath(item.fileName());
 			qDebug() << "Name:" << item.fileName();
 			qDebug() << "path: " << path;
-			qDebug() << "new path:" << newPath;
-			qDebug() << "Copy result" << QFile::copy(path, newPath);
+			if (item.isFile()) {
+				QString newPath = QDir::current().absoluteFilePath(item.fileName());
+				qDebug() << "new path:" << newPath;
+				qDebug() << "Copy result" << QFile::copy(path, newPath);
+			} else {
+				copyOrMoveDirectorySubtree(path, QDir::currentPath(), false, false);
+			}
 		}
 		foreach (QString path, itemsToMove) {
 			QFileInfo item(path);
-			QString newPath = QDir::current().absoluteFilePath(item.fileName());
 			qDebug() << "Name:" << item.fileName();
 			qDebug() << "path: " << path;
-			qDebug() << "new path:" << newPath;
-			qDebug() << "Copy result" << QFile::copy(path, newPath);
-			qDebug() << "Remove result" << QFile::remove(path);
+			if (item.isFile()) {
+				QString newPath = QDir::current().absoluteFilePath(item.fileName());
+				qDebug() << "new path:" << newPath;
+				qDebug() << "Copy result" << QFile::copy(path, newPath);
+				qDebug() << "Remove result" << QFile::remove(path);
+			} else {
+				copyOrMoveDirectorySubtree(path, QDir::currentPath(), true, false);
+			}
 		}
 
 		//		if (!item.isEmpty()) {
