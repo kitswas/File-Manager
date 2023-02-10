@@ -32,7 +32,7 @@ Navpage::Navpage(QFileSystemModel *model, MainWindow *root, QWidget *parent)
 	ui->verticalLayout->addWidget(dirView);
 	ui->verticalLayout->addWidget(driveInfo);
 
-	connect(dirView, &QAbstractItemView::doubleClicked, this, &Navpage::dirView_open_item);
+	connect(dirView, &QAbstractItemView::activated, this, &Navpage::dirView_open_item);
 	connect(dirView, &QAbstractItemView::clicked, this, &Navpage::dirView_show_iteminfo);
 }
 
