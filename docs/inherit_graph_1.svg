@@ -20,7 +20,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="classMainWindow.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classMainWindow.html" target="_top" xlink:title="The MainWindow class is responsible for the primary application window.">
 <polygon fill="white" stroke="#666666" points="207.5,-56 127.5,-56 127.5,-37 207.5,-37 207.5,-56"/>
 <text text-anchor="middle" x="167.5" y="-44" font-family="Helvetica,sans-Serif" font-size="10.00">MainWindow</text>
 </a>
@@ -35,7 +35,7 @@
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="classSearchWindow.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="classSearchWindow.html" target="_top" xlink:title="The SearchWindow class is used to create the search windows.">
 <polygon fill="white" stroke="#666666" points="212,-19 123,-19 123,0 212,0 212,-19"/>
 <text text-anchor="middle" x="167.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">SearchWindow</text>
 </a>

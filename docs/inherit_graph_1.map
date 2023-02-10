@@ -1,5 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
 <area shape="rect" id="node1" title=" " alt="" coords="5,31,121,56"/>
-<area shape="rect" id="node2" href="$classMainWindow.html" title=" " alt="" coords="175,5,282,31"/>
-<area shape="rect" id="node3" href="$classSearchWindow.html" title=" " alt="" coords="169,55,288,80"/>
+<area shape="rect" id="node2" href="$classMainWindow.html" title="The MainWindow class is responsible for the primary application window." alt="" coords="175,5,282,31"/>
+<area shape="rect" id="node3" href="$classSearchWindow.html" title="The SearchWindow class is used to create the search windows." alt="" coords="169,55,288,80"/>
 </map>
