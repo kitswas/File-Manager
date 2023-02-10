@@ -2,11 +2,16 @@
 
 ## Introduction
 
-This is a simple file manager written in C++ using Qt 6. It is an educational project for learning Qt and C++.
+This is a simple Cross-platform file manager written in C++ leveraging the power of Qt 6. This project was made for a certain Undergraduate course.  
+We welcome all to explore the codebase to learn more about Qt and C++.
+
+The software is not meant for general use. It is a proof of concept and does not take into account User Experience.
 
 *Warranty **not** included.* Use it at your own risk.
 
-## Setup
+![Screenshot](https://user-images.githubusercontent.com/90329875/218097518-b68c261e-847b-4f4a-a2c9-0ee7f2483ca9.png)
+
+## Setting up your development environment
 
 See the [Setup Guide](Setup_Guide.md).
 
