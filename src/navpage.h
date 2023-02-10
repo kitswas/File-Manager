@@ -14,6 +14,11 @@ namespace Ui {
 class Navpage;
 }
 
+/*!
+ * \brief The Navpage class
+ *
+ * The main window contains a tab panel. Each tab is modelled by a Navpage.
+ */
 class Navpage : public QWidget
 {
 	Q_OBJECT

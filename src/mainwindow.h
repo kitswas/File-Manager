@@ -12,6 +12,9 @@ namespace Ui
 }
 QT_END_NAMESPACE
 
+/*!
+ * \brief The MainWindow class is responsible for the primary application window.
+*/
 class MainWindow : public QMainWindow
 {
 	Q_OBJECT

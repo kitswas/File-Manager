@@ -10,6 +10,9 @@ namespace Ui {
 class SearchWindow;
 }
 
+/*!
+ * \brief The SearchWindow class is used to create the search windows.
+ */
 class SearchWindow : public QMainWindow
 {
 	Q_OBJECT

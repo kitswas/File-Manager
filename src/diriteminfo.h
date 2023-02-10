@@ -8,6 +8,9 @@ namespace Ui {
 class DirItemInfo;
 }
 
+/*!
+ * \brief The DirItemInfo class is used to display information about the currently selected item in the directory view.
+ */
 class DirItemInfo : public QWidget
 {
 	Q_OBJECT

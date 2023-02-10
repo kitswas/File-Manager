@@ -8,6 +8,9 @@ namespace Ui {
 class DriveInfo;
 }
 
+/*!
+ * \brief The DriveInfo class is used to display information about the current drive.
+ */
 class DriveInfo : public QWidget
 {
 	Q_OBJECT
