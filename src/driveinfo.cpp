@@ -2,8 +2,6 @@
 #include "ui_driveinfo.h"
 #include "utils.h"
 
-#include <QDir>
-
 DriveInfo::DriveInfo(QWidget *parent)
 	: QWidget(parent)
 	, ui(new Ui::DriveInfo)
@@ -18,11 +16,11 @@ DriveInfo::~DriveInfo()
 	delete info;
 }
 
-void DriveInfo::refreshDrive()
+void DriveInfo::refreshDrive(const QString &path)
 {
 	if (info)
 		delete info;
-	info = new QStorageInfo(QDir::current());
+	info = new QStorageInfo(path);
 	ui->name->setText(info->displayName());
 	ui->filesys->setText(info->fileSystemType());
 	ui->free_space->setText(format_bytes(info->bytesFree()));

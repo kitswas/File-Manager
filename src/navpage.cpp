@@ -51,10 +51,10 @@ int Navpage::change_dir(QString new_dir)
 		delete current_dir;
 	}
 	current_dir = new QDir(new_dir);
-	auto index = model->index(QDir::currentPath());
+	auto index = model->index(new_dir);
 	qDebug() << index;
 	dirView->setRootIndex(index);
-	driveInfo->refreshDrive();
+	driveInfo->refreshDrive(new_dir);
 	return 0;
 }
 

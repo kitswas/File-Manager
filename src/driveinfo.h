@@ -18,7 +18,7 @@ class DriveInfo : public QWidget
   public:
 	explicit DriveInfo(QWidget *parent = nullptr);
 	~DriveInfo();
-	void refreshDrive();
+	void refreshDrive(const QString &path = QDir::currentPath());
 
 private:
 	Ui::DriveInfo *ui;
