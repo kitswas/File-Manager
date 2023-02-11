@@ -44,6 +44,8 @@ MainWindow::MainWindow(QWidget *parent)
 	//	qDebug() << "index" << index;
 
 	ui->treeView->resizeColumnToContents(0);
+
+	connect(ui->treeView, &QTreeView::clicked, this, &MainWindow::on_treeView_activated);
 }
 
 MainWindow::~MainWindow()
