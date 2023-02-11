@@ -138,7 +138,9 @@ void MainWindow::on_tabWidget_currentChanged([[maybe_unused]] int index)
 
 void MainWindow::on_tabWidget_tabCloseRequested(int index)
 {
+	Navpage *currentpage = static_cast<Navpage *>(ui->tabWidget->currentWidget());
 	ui->tabWidget->removeTab(index);
+	delete currentpage;
 }
 
 void MainWindow::on_addressBar_returnPressed()
