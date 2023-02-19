@@ -36,18 +36,20 @@ void SearchWindow::search()
 	QString oldTitle = this->windowTitle();
 	this->setWindowTitle("Searching...please wait"); //Inform the user
 
-	QDirIterator diritems(searchpath, QDirIterator::Subdirectories);
+	QDir::Filters filters = QDir::AllEntries | QDir::NoDotAndDotDot;
+
+	if (ui->searchHidden->isChecked())
+		filters |= QDir::Hidden;
+	if (ui->searchSystem->isChecked())
+		filters |= QDir::System;
+
+	QDirIterator diritems(searchpath, filters, QDirIterator::Subdirectories);
 
 	while (diritems.hasNext()) {
 		const QFileInfo fileInfo = diritems.nextFileInfo();
-		if (fileInfo.fileName().compare(".") == 0
-		    || fileInfo.fileName().compare("..") == 0) //filters dot and dotdot
-			continue;
-		if (!fileInfo.isHidden()) {
-			if (fileInfo.fileName().contains(key, caseSensitivity)) {
-				results.append(fileInfo);
-				qDebug() << fileInfo;
-			}
+		if (fileInfo.fileName().contains(key, caseSensitivity)) {
+			results.append(fileInfo);
+			qDebug() << fileInfo;
 		}
 	}
 

@@ -80,6 +80,20 @@
         </widget>
        </item>
        <item>
+        <widget class="QCheckBox" name="searchHidden">
+         <property name="text">
+          <string>Hidden Files</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="searchSystem">
+         <property name="text">
+          <string>System Files</string>
+         </property>
+        </widget>
+       </item>
+       <item>
         <widget class="QCheckBox" name="checkBox">
          <property name="enabled">
           <bool>false</bool>
