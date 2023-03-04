@@ -2,6 +2,8 @@
 #include "ui_diriteminfo.h"
 #include "utils.h"
 
+#include <QMimeDatabase>
+
 #ifdef Q_OS_WIN
 // See https://doc.qt.io/qt-6/qfileinfo.html#details
 extern Q_CORE_EXPORT int qt_ntfs_permission_lookup;
@@ -41,5 +43,7 @@ void DirItemInfo::refresh()
 		qt_ntfs_permission_lookup--; // turn it off again, Windows only
 	ui->permissions->setText(permissions.trimmed());
 	ui->size->setText(format_bytes(info->size()));
-	//	info->permissions();
+
+	QMimeDatabase mimedb;
+	ui->mimetype->setText(mimedb.mimeTypeForFile(*info).comment());
 }
