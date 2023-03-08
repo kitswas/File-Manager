@@ -9,7 +9,7 @@ The software is not meant for general use. It is a proof of concept and does not
 
 *Warranty **not** included.* Use it at your own risk.
 
-![Screenshot](https://user-images.githubusercontent.com/90329875/218097518-b68c261e-847b-4f4a-a2c9-0ee7f2483ca9.png)
+![Screenshot](https://user-images.githubusercontent.com/90329875/223802253-d5cec233-98b5-4a3c-9b9e-64f9612c436e.png)
 
 ## Setting up your development environment
 
