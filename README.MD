@@ -5,6 +5,8 @@
 This is a simple Cross-platform file manager written in C++ leveraging the power of Qt 6. This project was made for a certain Undergraduate course.  
 We welcome all to explore the codebase to learn more about Qt and C++.
 
+[The source](https://github.com/kitswas/File-Manager) is licensed under [GPLv3](https://github.com/kitswas/File-Manager/blob/main/LICENSE.TXT).
+
 The software is not meant for general use. It is a proof of concept and does not take into account User Experience.
 
 *Warranty **not** included.* Use it at your own risk.
