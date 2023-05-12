@@ -7,7 +7,9 @@ We welcome all to explore the codebase to learn more about Qt and C++.
 
 [The source](https://github.com/kitswas/File-Manager) is licensed under [GPLv3](https://github.com/kitswas/File-Manager/blob/main/LICENSE.TXT).
 
-The software is not meant for general use. It is a proof of concept and does not take into account User Experience.
+The software is not meant for general use. It is a proof of concept and does not take into account User Experience.  
+This project neither promises to be fully functional, nor aims to compete with the various open-source File Managers out there.  
+Use them, not this, if you need something for general/daily use.
 
 *Warranty **not** included.* Use it at your own risk.
 
