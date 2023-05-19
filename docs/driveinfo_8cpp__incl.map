@@ -1,9 +1,15 @@
 <map id="src/driveinfo.cpp" name="src/driveinfo.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="177,5,308,31"/>
-<area shape="rect" id="node2" href="$driveinfo_8h.html" title=" " alt="" coords="71,79,163,104"/>
-<area shape="rect" id="node5" title=" " alt="" coords="187,79,298,104"/>
-<area shape="rect" id="node6" href="$utils_8h.html" title=" " alt="" coords="322,79,385,104"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,152,112,177"/>
-<area shape="rect" id="node4" title=" " alt="" coords="137,152,215,177"/>
-<area shape="rect" id="node7" title=" " alt="" coords="320,152,387,177"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="177,5,308,31"/>
+<area shape="rect" id="Node000002" href="$driveinfo_8h.html" title=" " alt="" coords="71,79,163,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="224,33,151,74,148,69,221,28"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="187,79,298,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="245,31,245,65,240,65,240,31"/>
+<area shape="rect" id="Node000006" href="$utils_8h.html" title=" " alt="" coords="322,79,385,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="262,28,325,69,322,73,259,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,152,112,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="110,106,79,143,75,140,106,103"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="137,152,215,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="129,103,160,140,156,143,125,106"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="320,152,387,177"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="356,104,356,138,351,138,351,104"/>
 </map>

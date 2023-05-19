@@ -25,17 +25,13 @@
 var NAVTREE =
 [
   [ "File Manager", "index.html", [
-    [ "File-Manager", "index.html", [
-      [ "Introduction", "index.html#autotoc_md1", null ],
-      [ "Setting up your development environment", "index.html#autotoc_md2", null ],
-      [ "Generating Documentation", "index.html#autotoc_md3", null ]
-    ] ],
-    [ "Setting up your workspace", "md_Setup_Guide.html", [
-      [ "Installing Qt", "md_Setup_Guide.html#autotoc_md5", null ],
-      [ "Setting up Qt Creator", "md_Setup_Guide.html#autotoc_md6", [
-        [ "Auto-formatting **(Important, don't skip)**", "md_Setup_Guide.html#autotoc_md7", null ],
-        [ "Setting up the project", "md_Setup_Guide.html#autotoc_md8", null ],
-        [ "Qt Creator Tips and tricks", "md_Setup_Guide.html#autotoc_md9", null ]
+    [ "File-Manager", "index.html", "index" ],
+    [ "Setting up your workspace", "md_Setup__Guide.html", [
+      [ "Installing Qt", "md_Setup__Guide.html#autotoc_md5", null ],
+      [ "Setting up Qt Creator", "md_Setup__Guide.html#autotoc_md6", [
+        [ "Auto-formatting **(Important, don't skip)**", "md_Setup__Guide.html#autotoc_md7", null ],
+        [ "Setting up the project", "md_Setup__Guide.html#autotoc_md8", null ],
+        [ "Qt Creator Tips and tricks", "md_Setup__Guide.html#autotoc_md9", null ]
       ] ]
     ] ],
     [ "Namespaces", "namespaces.html", [
@@ -49,7 +45,7 @@ var NAVTREE =
         [ "All", "functions.html", null ],
         [ "Functions", "functions_func.html", null ],
         [ "Enumerations", "functions_enum.html", null ],
-        [ "Related Functions", "functions_rela.html", null ]
+        [ "Related Symbols", "functions_rela.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [

@@ -4,6 +4,6 @@ var searchData=
   ['searchwindow_2ecpp_1',['searchwindow.cpp',['../searchwindow_8cpp.html',1,'']]],
   ['searchwindow_2eh_2',['searchwindow.h',['../searchwindow_8h.html',1,'']]],
   ['setqfileinfolist_3',['setQFileInfoList',['../classQFileInfoListModel.html#a8763b83219c776ec4b63e0864cfad10d',1,'QFileInfoListModel']]],
-  ['setting_20up_20your_20workspace_4',['Setting up your workspace',['../md_Setup_Guide.html',1,'']]],
+  ['setting_20up_20your_20workspace_4',['Setting up your workspace',['../md_Setup__Guide.html',1,'']]],
   ['setup_5fguide_2emd_5',['Setup_Guide.md',['../Setup__Guide_8md.html',1,'']]]
 ];

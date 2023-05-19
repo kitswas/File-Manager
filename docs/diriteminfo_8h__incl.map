@@ -1,5 +1,7 @@
 <map id="src/diriteminfo.h" name="src/diriteminfo.h">
-<area shape="rect" id="node1" title=" " alt="" coords="53,5,182,31"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,79,112,104"/>
-<area shape="rect" id="node3" title=" " alt="" coords="137,79,215,104"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="53,5,182,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,112,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="110,33,79,70,75,67,106,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="137,79,215,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="129,29,160,67,156,70,125,33"/>
 </map>

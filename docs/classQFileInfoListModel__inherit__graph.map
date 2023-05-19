@@ -1,4 +1,5 @@
 <map id="QFileInfoListModel" name="QFileInfoListModel">
-<area shape="rect" id="node1" title="The QFileInfoListModel class is a model for a list of QFileInfo objects." alt="" coords="14,79,157,104"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,165,31"/>
+<area shape="rect" id="Node000001" title="The QFileInfoListModel class is a model for a list of QFileInfo objects." alt="" coords="14,79,157,104"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,165,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="88,44,88,79,83,79,83,44"/>
 </map>

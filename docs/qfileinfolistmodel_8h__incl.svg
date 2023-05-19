@@ -9,43 +9,49 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 78)">
 <title>src/qfileinfolistmodel.h</title>
 <!-- Node1 -->
-<g id="node1" class="node">
+<g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_Node000001"><a xlink:title=" ">
 <polygon fill="#999999" stroke="#666666" points="178,-74 50,-74 50,-55 178,-55 178,-74"/>
 <text text-anchor="middle" x="114" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">src/qfileinfolistmodel.h</text>
 </a>
 </g>
 </g>
 <!-- Node2 -->
-<g id="node2" class="node">
+<g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:title=" ">
+<g id="a_Node000002"><a xlink:title=" ">
 <polygon fill="#e0e0e0" stroke="#999999" points="120,-19 0,-19 0,0 120,0 120,-19"/>
 <text text-anchor="middle" x="60" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">QAbstractTableModel</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node2 -->
-<g id="edge1" class="edge">
+<g id="edge1_Node000001_Node000002" class="edge">
 <title>Node1&#45;&gt;Node2</title>
+<g id="a_edge1_Node000001_Node000002"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M105.08,-54.75C97.22,-47.03 85.57,-35.6 76.08,-26.28"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="78.34,-23.6 68.75,-19.09 73.44,-28.59 78.34,-23.6"/>
+</a>
+</g>
 </g>
 <!-- Node3 -->
-<g id="node3" class="node">
+<g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:title=" ">
+<g id="a_Node000003"><a xlink:title=" ">
 <polygon fill="#e0e0e0" stroke="#999999" points="198,-19 138,-19 138,0 198,0 198,-19"/>
 <text text-anchor="middle" x="168" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">QFileInfo</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node3 -->
-<g id="edge2" class="edge">
+<g id="edge2_Node000001_Node000003" class="edge">
 <title>Node1&#45;&gt;Node3</title>
+<g id="a_edge2_Node000001_Node000003"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M122.92,-54.75C130.78,-47.03 142.43,-35.6 151.92,-26.28"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="154.56,-28.59 159.25,-19.09 149.66,-23.6 154.56,-28.59"/>
+</a>
+</g>
 </g>
 </g>
 </svg>

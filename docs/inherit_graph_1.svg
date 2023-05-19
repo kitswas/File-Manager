@@ -9,43 +9,49 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 60)">
 <title>Graphical Class Hierarchy</title>
 <!-- Node0 -->
-<g id="node1" class="node">
+<g id="Node000000" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_Node000000"><a xlink:title=" ">
 <polygon fill="#e0e0e0" stroke="#999999" points="87,-37 0,-37 0,-18 87,-18 87,-37"/>
 <text text-anchor="middle" x="43.5" y="-25" font-family="Helvetica,sans-Serif" font-size="10.00">QMainWindow</text>
 </a>
 </g>
 </g>
 <!-- Node1 -->
-<g id="node2" class="node">
+<g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="classMainWindow.html" target="_top" xlink:title="The MainWindow class is responsible for the primary application window.">
+<g id="a_Node000001"><a xlink:href="classMainWindow.html" target="_top" xlink:title="The MainWindow class is responsible for the primary application window.">
 <polygon fill="white" stroke="#666666" points="207.5,-56 127.5,-56 127.5,-37 207.5,-37 207.5,-56"/>
 <text text-anchor="middle" x="167.5" y="-44" font-family="Helvetica,sans-Serif" font-size="10.00">MainWindow</text>
 </a>
 </g>
 </g>
 <!-- Node0&#45;&gt;Node1 -->
-<g id="edge1" class="edge">
+<g id="edge2_Node000000_Node000001" class="edge">
 <title>Node0&#45;&gt;Node1</title>
+<g id="a_edge2_Node000000_Node000001"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M97.15,-35.7C107.28,-37.28 117.72,-38.9 127.33,-40.4"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="97.59,-32.23 87.17,-34.15 96.51,-39.14 97.59,-32.23"/>
+</a>
+</g>
 </g>
 <!-- Node2 -->
-<g id="node3" class="node">
+<g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="classSearchWindow.html" target="_top" xlink:title="The SearchWindow class is used to create the search windows.">
+<g id="a_Node000002"><a xlink:href="classSearchWindow.html" target="_top" xlink:title="The SearchWindow class is used to create the search windows.">
 <polygon fill="white" stroke="#666666" points="212,-19 123,-19 123,0 212,0 212,-19"/>
 <text text-anchor="middle" x="167.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">SearchWindow</text>
 </a>
 </g>
 </g>
 <!-- Node0&#45;&gt;Node2 -->
-<g id="edge2" class="edge">
+<g id="edge3_Node000000_Node000002" class="edge">
 <title>Node0&#45;&gt;Node2</title>
+<g id="a_edge3_Node000000_Node000002"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M97.1,-19.74C105.68,-18.47 114.48,-17.17 122.82,-15.94"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="96.55,-16.28 87.17,-21.2 97.57,-23.21 96.55,-16.28"/>
+</a>
+</g>
 </g>
 </g>
 </svg>

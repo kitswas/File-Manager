@@ -9,73 +9,85 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 78)">
 <title>src/utils.h</title>
 <!-- Node1 -->
-<g id="node1" class="node">
+<g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_Node000001"><a xlink:title=" ">
 <polygon fill="#999999" stroke="#666666" points="269,-74 205,-74 205,-55 269,-55 269,-74"/>
 <text text-anchor="middle" x="237" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">src/utils.h</text>
 </a>
 </g>
 </g>
 <!-- Node2 -->
-<g id="node2" class="node">
+<g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="diriteminfo_8cpp.html" target="_top" xlink:title=" ">
+<g id="a_Node000002"><a xlink:href="diriteminfo_8cpp.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="108,-19 0,-19 0,0 108,0 108,-19"/>
 <text text-anchor="middle" x="54" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">src/diriteminfo.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node2 -->
-<g id="edge1" class="edge">
+<g id="edge1_Node000001_Node000002" class="edge">
 <title>Node1&#45;&gt;Node2</title>
+<g id="a_edge1_Node000001_Node000002"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M197.93,-52.18C163.7,-42.27 114.71,-28.08 83.63,-19.08"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="197.02,-55.56 207.6,-54.98 198.97,-48.84 197.02,-55.56"/>
+</a>
+</g>
 </g>
 <!-- Node3 -->
-<g id="node3" class="node">
+<g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="driveinfo_8cpp.html" target="_top" xlink:title=" ">
+<g id="a_Node000003"><a xlink:href="driveinfo_8cpp.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="224,-19 126,-19 126,0 224,0 224,-19"/>
 <text text-anchor="middle" x="175" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">src/driveinfo.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node3 -->
-<g id="edge2" class="edge">
+<g id="edge2_Node000001_Node000003" class="edge">
 <title>Node1&#45;&gt;Node3</title>
+<g id="a_edge2_Node000001_Node000003"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M219.25,-48.32C208.19,-38.87 194.37,-27.06 185.14,-19.17"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="217.16,-51.15 227.04,-54.98 221.71,-45.83 217.16,-51.15"/>
+</a>
+</g>
 </g>
 <!-- Node4 -->
-<g id="node4" class="node">
+<g id="Node000004" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="mainwindow_8cpp.html" target="_top" xlink:title=" ">
+<g id="a_Node000004"><a xlink:href="mainwindow_8cpp.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="358,-19 242,-19 242,0 358,0 358,-19"/>
 <text text-anchor="middle" x="300" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">src/mainwindow.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node4 -->
-<g id="edge3" class="edge">
+<g id="edge3_Node000001_Node000004" class="edge">
 <title>Node1&#45;&gt;Node4</title>
+<g id="a_edge3_Node000001_Node000004"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M255.04,-48.32C266.27,-38.87 280.32,-27.06 289.69,-19.17"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="252.52,-45.87 247.12,-54.98 257.03,-51.23 252.52,-45.87"/>
+</a>
+</g>
 </g>
 <!-- Node5 -->
-<g id="node5" class="node">
+<g id="Node000005" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="utils_8cpp.html" target="_top" xlink:title=" ">
+<g id="a_Node000005"><a xlink:href="utils_8cpp.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="451.5,-19 376.5,-19 376.5,0 451.5,0 451.5,-19"/>
 <text text-anchor="middle" x="414" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">src/utils.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node5 -->
-<g id="edge4" class="edge">
+<g id="edge4_Node000001_Node000005" class="edge">
 <title>Node1&#45;&gt;Node5</title>
+<g id="a_edge4_Node000001_Node000005"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M275.22,-52.06C308.3,-42.15 355.41,-28.04 385.34,-19.08"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="274.01,-48.76 265.44,-54.98 276.02,-55.47 274.01,-48.76"/>
+</a>
+</g>
 </g>
 </g>
 </svg>
