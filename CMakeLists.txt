@@ -1,7 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
 project(File-Manager VERSION 0.1 LANGUAGES CXX)
-# TODO Update to Qt 6.5 for Windows Dark Mode Support as soon as it is released
 # TODO Implement MTP device detection and mounting
 
 set(CMAKE_AUTOUIC ON)
@@ -18,7 +17,7 @@ if("${CMAKE_CXX_COMPILER_ID}" MATCHES "Clang" OR "${CMAKE_CXX_COMPILER_ID}" MATC
         set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O3 -s -DNDEBUG")
 endif()
 
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
+find_package(QT NAMES Qt6 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
 set(PROJECT_SOURCES
