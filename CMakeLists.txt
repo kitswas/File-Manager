@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(File-Manager VERSION 0.1 LANGUAGES CXX)
+project(File-Manager VERSION 0.2 LANGUAGES CXX)
 # TODO Implement MTP device detection and mounting
 
 set(CMAKE_AUTOUIC ON)
