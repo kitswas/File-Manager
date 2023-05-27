@@ -44,7 +44,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Name:</string>
+      <string>Disk name:</string>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
