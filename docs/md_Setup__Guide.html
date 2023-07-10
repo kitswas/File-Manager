@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.9.7-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
 <head>
@@ -17,6 +18,26 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-custom.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -94,8 +115,8 @@ $(document).ready(function(){initNavTree('md_Setup__Guide.html',''); initResizab
   <div class="headertitle"><div class="title">Setting up your workspace</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md4"></a> This project uses Qt.</p>
-<h1><a class="anchor" id="autotoc_md5"></a>
+<div class="textblock"><p><a class="anchor" id="setting-up-your-workspace"></a> This project uses Qt.</p>
+<h1><a class="anchor" id="installing-qt"></a>
 Installing Qt</h1>
 <p>You will need a Qt account to download Qt. If you don't have one, you can <a href="https://login.qt.io/register">create one</a>.</p>
 <ol type="1">
@@ -113,9 +134,9 @@ Installing Qt</h1>
 <p class="startli">In general, keep the default options selected by the Qt installer for your system. Additionally, select the latest minor version of Qt 6.</p>
 </li>
 </ol>
-<h1><a class="anchor" id="autotoc_md6"></a>
+<h1><a class="anchor" id="setting-up-qt-creator"></a>
 Setting up Qt Creator</h1>
-<h2><a class="anchor" id="autotoc_md7"></a>
+<h2><a class="anchor" id="auto-formatting-important-dont-skip"></a>
 Auto-formatting **(Important, don't skip)**</h2>
 <p>ClangFormat should be installed on your system for this to work. If you don't have it, install it</p>
 <ul>
@@ -140,7 +161,7 @@ Auto-formatting **(Important, don't skip)**</h2>
  Qt Creator should automatically detect the .clang-format file in the project root directory and use it for auto-formatting.</p>
 </li>
 </ol>
-<h2><a class="anchor" id="autotoc_md8"></a>
+<h2><a class="anchor" id="setting-up-the-project"></a>
 Setting up the project</h2>
 <ol type="1">
 <li>Open Qt Creator.</li>
@@ -151,7 +172,7 @@ Setting up the project</h2>
 <li>Select the <b>Build</b> menu and click on <b>Build Project</b>. Wait for the process to finish. Then click on the <b>Run</b> button.</li>
 </ol>
 <p>Congratulations! You have successfully set up the project.</p>
-<h2><a class="anchor" id="autotoc_md9"></a>
+<h2><a class="anchor" id="qt-creator-tips-and-tricks"></a>
 Qt Creator Tips and tricks</h2>
 <ul>
 <li>Press <code>F1</code> with the cursor on any identifier to bring up the documentation.</li>
