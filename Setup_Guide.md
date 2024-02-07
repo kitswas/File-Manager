@@ -12,13 +12,13 @@ You will need a Qt account to download Qt. If you don't have one, you can [creat
 
 3. Select the following components:  
 ![image showing components selected](https://user-images.githubusercontent.com/90329875/210178913-24706279-db3d-4fb2-95c6-02f3287e383a.png)  
-    - Qt 6.4 latest (Desktop components only)
+    - Qt 6.5 LTS (Desktop components only)
     - MinGW 11.2.0 64-bit
     - Qt Creator latest
     - Qt Design Studio latest
     - Cmake latest
 
-    In general, keep the default options selected by the Qt installer for your system. Additionally, select the latest minor version of Qt 6.
+    In general, keep the default options selected by the Qt installer for your system. Additionally, select the latest minor version of Qt 6.5.
 
 ## Setting up Qt Creator
 
