@@ -1,13 +1,10 @@
 var searchData=
 [
-  ['searchwindow_0',['searchwindow',['../classSearchWindow.html',1,'SearchWindow'],['../classSearchWindow.html#a7f973f32be165bca204e2bf6076f7de2',1,'SearchWindow::SearchWindow()']]],
-  ['searchwindow_2ecpp_1',['searchwindow.cpp',['../searchwindow_8cpp.html',1,'']]],
-  ['searchwindow_2eh_2',['searchwindow.h',['../searchwindow_8h.html',1,'']]],
-  ['setqfileinfolist_3',['setQFileInfoList',['../classQFileInfoListModel.html#a8763b83219c776ec4b63e0864cfad10d',1,'QFileInfoListModel']]],
-  ['setting_20up_20qt_20creator_4',['Setting up Qt Creator',['../md_Setup__Guide.html#setting-up-qt-creator',1,'']]],
-  ['setting_20up_20the_20project_5',['Setting up the project',['../md_Setup__Guide.html#setting-up-the-project',1,'']]],
-  ['setting_20up_20your_20development_20environment_6',['Setting up your development environment',['../index.html#setting-up-your-development-environment',1,'']]],
-  ['setting_20up_20your_20workspace_7',['Setting up your workspace',['../md_Setup__Guide.html',1,'']]],
-  ['setup_5fguide_2emd_8',['Setup_Guide.md',['../Setup__Guide_8md.html',1,'']]],
-  ['skip_9',['Auto-formatting **(Important, don&apos;t skip)**',['../md_Setup__Guide.html#auto-formatting-important-dont-skip',1,'']]]
+  ['qfileinfolistmodel_0',['qfileinfolistmodel',['../classQFileInfoListModel.html',1,'QFileInfoListModel'],['../classQFileInfoListModel.html#aa75ccd47d830fc93e131651d3ac66ffe',1,'QFileInfoListModel::QFileInfoListModel()']]],
+  ['qfileinfolistmodel_2ecpp_1',['qfileinfolistmodel.cpp',['../qfileinfolistmodel_8cpp.html',1,'']]],
+  ['qfileinfolistmodel_2eh_2',['qfileinfolistmodel.h',['../qfileinfolistmodel_8h.html',1,'']]],
+  ['qt_3',['Installing Qt',['../md_Setup__Guide.html#installing-qt',1,'']]],
+  ['qt_20creator_4',['Setting up Qt Creator',['../md_Setup__Guide.html#setting-up-qt-creator',1,'']]],
+  ['qt_20creator_20tips_20and_20tricks_5',['Qt Creator Tips and tricks',['../md_Setup__Guide.html#qt-creator-tips-and-tricks',1,'']]],
+  ['qt_5fntfs_5fpermission_5flookup_6',['qt_ntfs_permission_lookup',['../diriteminfo_8cpp.html#afeb86fc87af7051b8140f2e40977e352',1,'diriteminfo.cpp']]]
 ];

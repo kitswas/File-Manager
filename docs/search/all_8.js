@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['main_0',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]],
-  ['main_2ecpp_1',['main.cpp',['../main_8cpp.html',1,'']]],
-  ['mainwindow_2',['mainwindow',['../classMainWindow.html',1,'MainWindow'],['../classMainWindow.html#a996c5a2b6f77944776856f08ec30858d',1,'MainWindow::MainWindow()']]],
-  ['mainwindow_2ecpp_3',['mainwindow.cpp',['../mainwindow_8cpp.html',1,'']]],
-  ['mainwindow_2eh_4',['mainwindow.h',['../mainwindow_8h.html',1,'']]],
-  ['manager_5',['File-Manager',['../index.html',1,'']]]
+  ['important_20don_20t_20skip_0',['Auto-formatting **(Important, don&apos;t skip)**',['../md_Setup__Guide.html#auto-formatting-important-dont-skip',1,'']]],
+  ['installing_20qt_1',['Installing Qt',['../md_Setup__Guide.html#installing-qt',1,'']]],
+  ['introduction_2',['Introduction',['../index.html#introduction',1,'']]]
 ];

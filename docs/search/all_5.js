@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['generating_20documentation_0',['Generating Documentation',['../index.html#generating-documentation',1,'']]],
-  ['get_5fcurrent_5fdir_1',['get_current_dir',['../classNavpage.html#a101cbbf3a3f74427a65b43ebbf7a895a',1,'Navpage']]],
-  ['get_5fselection_2',['get_selection',['../classNavpage.html#ab4408c7cb6de2746c055aedcf343e898',1,'Navpage']]]
+  ['file_20manager_0',['File-Manager',['../index.html',1,'']]],
+  ['format_5fbytes_1',['format_bytes',['../utils_8cpp.html#a9af16beef915b55c271253de24d3d2c1',1,'format_bytes(qint64 bytes):&#160;utils.cpp'],['../utils_8h.html#a9af16beef915b55c271253de24d3d2c1',1,'format_bytes(qint64 bytes):&#160;utils.cpp']]],
+  ['formatting_20important_20don_20t_20skip_2',['Auto-formatting **(Important, don&apos;t skip)**',['../md_Setup__Guide.html#auto-formatting-important-dont-skip',1,'']]]
 ];

@@ -1,13 +1,9 @@
 var searchData=
 [
-  ['data_0',['data',['../classQFileInfoListModel.html#a201626a2532e4be2dae916975f68f2ef',1,'QFileInfoListModel']]],
-  ['development_20environment_1',['Setting up your development environment',['../index.html#setting-up-your-development-environment',1,'']]],
-  ['diriteminfo_2',['diriteminfo',['../classDirItemInfo.html',1,'DirItemInfo'],['../classDirItemInfo.html#a4fea9982fb49fa7961542a6a8988ca68',1,'DirItemInfo::DirItemInfo()']]],
-  ['diriteminfo_2ecpp_3',['diriteminfo.cpp',['../diriteminfo_8cpp.html',1,'']]],
-  ['diriteminfo_2eh_4',['diriteminfo.h',['../diriteminfo_8h.html',1,'']]],
-  ['documentation_5',['Generating Documentation',['../index.html#generating-documentation',1,'']]],
-  ['don_20t_20skip_6',['Auto-formatting **(Important, don&apos;t skip)**',['../md_Setup__Guide.html#auto-formatting-important-dont-skip',1,'']]],
-  ['driveinfo_7',['driveinfo',['../classDriveInfo.html',1,'DriveInfo'],['../classDriveInfo.html#aeb6098190b6cebb19137df095ac35a9c',1,'DriveInfo::DriveInfo()']]],
-  ['driveinfo_2ecpp_8',['driveinfo.cpp',['../driveinfo_8cpp.html',1,'']]],
-  ['driveinfo_2eh_9',['driveinfo.h',['../driveinfo_8h.html',1,'']]]
+  ['cdsource_0',['CDSource',['../classMainWindow.html#a29602bd42f9b384caf705f3b63b6cbf1',1,'MainWindow']]],
+  ['change_5fdir_1',['change_dir',['../classNavpage.html#a9ecbb7921a88681628ed52e5ea4a49bc',1,'Navpage']]],
+  ['columncount_2',['columnCount',['../classQFileInfoListModel.html#a28596c395f911e883cf0cd1c9019447a',1,'QFileInfoListModel']]],
+  ['copyormovedirectorysubtree_3',['copyormovedirectorysubtree',['../utils_8cpp.html#a6888f2979e2c427c4148c6738ea39a44',1,'copyOrMoveDirectorySubtree(const QString &amp;from, const QString &amp;to, bool copyAndRemove, bool overwriteExistingFiles):&#160;utils.cpp'],['../utils_8h.html#a6888f2979e2c427c4148c6738ea39a44',1,'copyOrMoveDirectorySubtree(const QString &amp;from, const QString &amp;to, bool copyAndRemove, bool overwriteExistingFiles):&#160;utils.cpp']]],
+  ['creator_4',['Setting up Qt Creator',['../md_Setup__Guide.html#setting-up-qt-creator',1,'']]],
+  ['creator_20tips_20and_20tricks_5',['Qt Creator Tips and tricks',['../md_Setup__Guide.html#qt-creator-tips-and-tricks',1,'']]]
 ];
