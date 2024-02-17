@@ -19,6 +19,11 @@ Use them, not this, if you need something for general/daily use.
 
 See the [Setup Guide](Setup_Guide.md).
 
+## Online Builds
+
+You can now build and run the project online using GitHub Actions.  
+Head over to [kitswas/File-Manager-Builds](https://github.com/kitswas/File-Manager-Builds) and follow the instructions.
+
 ## Generating Documentation
 
 This project uses [Doxygen](https://www.doxygen.nl/index.html) to generate documentation.  
