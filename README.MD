@@ -13,7 +13,8 @@ Use them, not this, if you need something for general/daily use.
 
 *Warranty **not** included.* Use it at your own risk.
 
-![Screenshot](https://user-images.githubusercontent.com/90329875/223802253-d5cec233-98b5-4a3c-9b9e-64f9612c436e.png)
+![Screenshot](https://github.com/kitswas/kitswas/assets/90329875/707759c8-1661-4993-ac97-7f2eda09f0a0)  
+*Screenshot showing the File Manager application (build a4a18b6a0c375ef03e0a6ee4329fe96cd4254d9c) with an open search dialog running in Windows 11.*
 
 ## Setting up your development environment
 
