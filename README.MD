@@ -37,6 +37,4 @@ doxygen Doxyfile
 
 Once done, you can open the generated documentation by opening the [`docs/index.html`](docs/index.html) file in your browser.
 
-This repository has automated workflow via Github Actions. Documentation is auto-generated.  
-Disable Actions on your own fork or delete the [workflows](./.github/workflows) folder if you do not want to be billed.  
-This is **not my responsiblity.**
+This repository has automated workflow(s) via GitHub Actions. Documentation is auto-generated.  
