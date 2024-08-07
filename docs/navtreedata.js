@@ -29,7 +29,7 @@ var NAVTREE =
     [ "Setting up your workspace", "md_Setup__Guide.html", [
       [ "Installing Qt", "md_Setup__Guide.html#installing-qt", null ],
       [ "Setting up Qt Creator", "md_Setup__Guide.html#setting-up-qt-creator", [
-        [ "Auto-formatting **(Important, don't skip)**", "md_Setup__Guide.html#auto-formatting-important-dont-skip", null ],
+        [ "Auto-formatting (Important, don't skip)", "md_Setup__Guide.html#auto-formatting-important-dont-skip", null ],
         [ "Setting up the project", "md_Setup__Guide.html#setting-up-the-project", null ],
         [ "Qt Creator Tips and tricks", "md_Setup__Guide.html#qt-creator-tips-and-tricks", null ]
       ] ]
