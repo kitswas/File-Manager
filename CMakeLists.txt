@@ -84,3 +84,13 @@ install(TARGETS File-Manager
 if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(File-Manager)
 endif()
+
+# On Windows, we need to copy the DLLs to the output directory using windeployqt
+# This is done by adding a custom command as a post-build step
+# The CMake Cache variable WINDEPLOYQT_EXECUTABLE should contain the path to windeployqt
+if(WIN32)
+    add_custom_command(
+        TARGET File-Manager POST_BUILD
+        COMMAND ${WINDEPLOYQT_EXECUTABLE} $<TARGET_FILE:File-Manager>
+    )
+endif()
